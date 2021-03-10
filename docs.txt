@@ -1,0 +1,77 @@
+C X X X X
+||
+\/
+
+UNUSED       UNUSED       UNUSED     UNUSED ||
+UNUSED       UNUSED       SQSH0      SQSH1 || 
+SQSH2        BCASCADEMOD  BCLKMOD    BLOAD ||
+BINMOD       BENDEF       ALUCIN     ACASCADEMOD ||
+ACLKMOD      ALOAD        AINMOD     AENDEF ||
+PCCASCADEMOD PCCLKMOD     PCLOAD     PCINMOD  ||
+PCENDEF      RAMLOAD      MARENDEF   MARINMOD  ||
+MARLOAD      MARCLKMOD    MARCASCADE IRLOAD
+
+
+
+SQSH2 SQSH1 SQSH0
+0     0     0    => NONE
+0     0     1    => IRENO
+0     1     0    => RAMENO
+0     1     1    => MARENO
+1     0     0    => PCENO
+1     0     1    => AENO
+1     1     0    => ALUENO
+1     1     1    => BENO
+
+TOA: ( Load immediate address from ram to A reg )
+(0) 0 0 0 1: IRENO | MARLOAD =>  ( 0x02000008 )
+(1) 0 0 0 1: RAMENO | ALOAD   => ( 0x01004000 )
+
+TOB: ( Load immediate address from tam to B reg )
+(0) 0 0 1 0: IRENO | MARLOAD
+(1) 0 0 1 0: RAMENO | BLOAD
+
+SUM: ( Add a to b and store result in a )
+(0)  0 0 1 1: ALUENO | ALOAD
+(1)  0 0 1 1: 
+
+SUB: ( Sub a from b and store rsult in a )
+(0)  0 0 1 1: AENDEF | ALOAD | AINMOD
+(1)  0 0 1 1: ALUENO | ALOAD | ALUCIN
+
+FROMA; ( Store value of a at immediate address )
+(0)  0 1 0 0: IRENO | MARLOAD
+(1)  0 1 0 0: AENO | RAMLOAD
+
+FROMB: ( Store value of b at immediate address )
+(0)  0 1 0 1: IRENO | MARLOAD
+(1)  0 1 0 1: BENO | RAMLOAD
+
+JMP: ( Jump to immediate address )
+(0)  0 1 1 0: IRENO | PCLOAD
+(1)  0 1 1 0:
+
+INCA: ( Increment A )
+(0)  0 1 1 1: AENDEF | ALOAD | AINMOD | ACLKMOD
+(1)  0 1 1 1:
+
+INCB: ( Increment B )
+(0)  1 0 0 0: BENDEf | BLOAD | BINMOD | BCLKMOD
+(1)  1 0 0 0:
+
+DECA: ( Decrement A )
+(0)  1 0 0 1: AENDEF | ALOAD | AINMOD | ACLKMOD | ACASCADEMOD
+(1)  1 0 0 1:
+
+DECB: ( Decrement B )
+(0)  1 0 1 0: BENDEF | BLOAD | BINMOD | BCLKMOD | BCASCADEMOD
+(1)  1 0 1 0:
+
+NEGA: ( Negate A )
+(0)  1 0 1 1: AENDEF | ALOAD | AINMOD
+(1)  1 0 1 1: AENDEF | ALOAD | AINMOD | ACLKMOD
+
+NEGB: ( Negate B )
+(0)  1 1 0 0: BENDEF | BLOAD | BINMOD
+(1)  1 1 0 0: BENDEF | BLOAD | BINMOD | BCLKMOD
+
