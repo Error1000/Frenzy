@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1615668105 source:/home/dan/Documents/Coding/Digital/Frenzy/microcodegen/main.cpp
+	<iostream>
+	<fstream>
+

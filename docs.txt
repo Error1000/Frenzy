@@ -3,7 +3,7 @@ C X X X X
 \/
 
 UNUSED       UNUSED       UNUSED     UNUSED ||
-UNUSED       UNUSED       SQSH0      SQSH1 || 
+UNUSED       FEN          SQSH0      SQSH1 || 
 SQSH2        BCASCADEMOD  BCLKMOD    BLOAD ||
 BINMOD       BENDEF       ALUCIN     ACASCADEMOD ||
 ACLKMOD      ALOAD        AINMOD     AENDEF ||
