@@ -44,6 +44,8 @@ MARLOAD      MARCLKMOD    MARCASCADE IRLOAD
 #define MARCASCADE      0b00000000000000000000000000000010
 #define IRLOAD          0b00000000000000000000000000000001
 
+
+/// WARNING: You can't have more than one component enabled
 #define NONE 0
 #define IRENO  (    0 |     0 | SQSH0)
 #define RAMENO (    0 | SQSH1 |     0)
@@ -56,21 +58,21 @@ MARLOAD      MARCLKMOD    MARCASCADE IRLOAD
 
 #define HIGHBIT 0b10000
 
-#define TOA   1
-#define TOB   2
-#define SUM   3
-#define SUB   4
-#define FROMA 5
-#define FROMB 6
-#define JMP   7
-#define INCA  8
-#define INCB  9
-#define DECA  10
-#define DECB  11
-#define NEGA  12
-#define NEGB  13
-#define JMPC  14
-#define JMPZ  15
+#define TOA   0x1
+#define TOB   0x2
+#define SUM   0x3
+#define SUB   0x4
+#define FROMA 0x5
+#define FROMB 0x6
+#define JMP   0x7
+#define INCA  0x8
+#define INCB  0x9
+#define DECA  0xA
+#define DECB  0xB
+#define NEGA  0xC
+#define NEGB  0xD
+#define JMPC  0xE
+#define JMPZ  0xF
 
 
 uint32_t rom[(1<<5) - 1];
@@ -102,22 +104,22 @@ int main(){
     rom[JMP|HIGHBIT]    = 0;
 
     rom[INCA]           = AENDEF | AINMOD | ACLKMOD;
-    rom[INCA|HIGHBIT]   = AENDEF | AINMOD | ACLKMOD | ALOAD;
+    rom[INCA|HIGHBIT]   = AENDEF | AINMOD | ACLKMOD | ALOAD | FEN;
 
     rom[INCB]           = BENDEF | BINMOD | BCLKMOD;
-    rom[INCB|HIGHBIT]   = BENDEF | BINMOD | BCLKMOD | BLOAD;
+    rom[INCB|HIGHBIT]   = BENDEF | BINMOD | BCLKMOD | BLOAD | FEN;
 
     rom[DECA]           = AENDEF | AINMOD | ACLKMOD | ACASCADEMOD;
-    rom[DECA|HIGHBIT]   = AENDEF | AINMOD | ACLKMOD | ACASCADEMOD | ALOAD;
+    rom[DECA|HIGHBIT]   = AENDEF | AINMOD | ACLKMOD | ACASCADEMOD | ALOAD | FEN;
 
     rom[DECB]           = BENDEF | BINMOD | BCLKMOD | BCASCADEMOD;
-    rom[DECB|HIGHBIT]   = BENDEF | BINMOD | BCLKMOD | BCASCADEMOD | BLOAD;
+    rom[DECB|HIGHBIT]   = BENDEF | BINMOD | BCLKMOD | BCASCADEMOD | BLOAD | FEN;
 
     rom[NEGA]           = AENDEF | ALOAD | AINMOD;
-    rom[NEGA|HIGHBIT]   = AENDEF | ALOAD | AINMOD | ACLKMOD;
+    rom[NEGA|HIGHBIT]   = AENDEF | ALOAD | AINMOD | ACLKMOD | FEN;
 
     rom[NEGB]           = BENDEF | BLOAD | BINMOD;
-    rom[NEGB|HIGHBIT]   = BENDEF | BLOAD | BINMOD | BCLKMOD;
+    rom[NEGB|HIGHBIT]   = BENDEF | BLOAD | BINMOD | BCLKMOD | FEN;
 
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size
     rom[JMPZ]           = 0;
