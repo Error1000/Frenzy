@@ -3577,9 +3577,9 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>0,2000008,2000008,5804000,1c0000,2000008,2000008,2000200,b000,2c0000,1b000,6c0000,
-7000,1c0000,0,0,0,1004000,1100000,0,5824000,2800040,3800040,0,400f000,43c0000,401f000,
-47c0000,400f000,43c0000</data>
+          <data>0,2000008,2000008,5804000,1c0000,2000008,2000008,2000008,b000,2c0000,1b000,6c0000,
+7000,1c0000,0,0,0,1004000,1100000,0,5824000,2800040,3800040,1000200,400f000,43c0000,
+401f000,47c0000,400f000,43c0000</data>
         </entry>
         <entry>
           <string>lastDataFile</string>
@@ -3655,7 +3655,7 @@
     <visualElement>
       <elementName>Not</elementName>
       <elementAttributes/>
-      <pos x="-1660" y="2860"/>
+      <pos x="-1680" y="2860"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -3665,7 +3665,7 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1620" y="2820"/>
+      <pos x="-1640" y="2820"/>
     </visualElement>
     <visualElement>
       <elementName>PullDown</elementName>
@@ -3966,34 +3966,6 @@ combinatorial logic</string>
           <string>wideShape</string>
           <boolean>true</boolean>
         </entry>
-      </elementAttributes>
-      <pos x="-1440" y="3120"/>
-    </visualElement>
-    <visualElement>
-      <elementName>And</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="-1420" y="3220"/>
-    </visualElement>
-    <visualElement>
-      <elementName>And</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
         <entry>
           <string>inverterConfig</string>
           <inverterConfig>
@@ -4001,17 +3973,7 @@ combinatorial logic</string>
           </inverterConfig>
         </entry>
       </elementAttributes>
-      <pos x="-1400" y="3360"/>
-    </visualElement>
-    <visualElement>
-      <elementName>And</elementName>
-      <elementAttributes>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="-1380" y="3460"/>
+      <pos x="-1400" y="3140"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -4025,17 +3987,35 @@ combinatorial logic</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1480" y="3360"/>
+      <pos x="-1420" y="3580"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
       <elementAttributes>
         <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
           <string>wideShape</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1380" y="3620"/>
+      <pos x="-1480" y="3140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1500" y="3640"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
@@ -4049,7 +4029,7 @@ combinatorial logic</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-1920" y="3700"/>
+      <pos x="-1920" y="3680"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
@@ -4063,7 +4043,7 @@ combinatorial logic</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-1940" y="3540"/>
+      <pos x="-1940" y="3620"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
@@ -4079,11 +4059,15 @@ combinatorial logic</string>
       <elementName>Or</elementName>
       <elementAttributes>
         <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
           <string>wideShape</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1300" y="3480"/>
+      <pos x="-1460" y="3740"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -4093,7 +4077,7 @@ combinatorial logic</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1280" y="3300"/>
+      <pos x="-1280" y="3400"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -4123,7 +4107,85 @@ combinatorial logic</string>
           <rotation rotation="3"/>
         </entry>
       </elementAttributes>
-      <pos x="-1320" y="3280"/>
+      <pos x="-1320" y="3380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Inputs</string>
+          <int>3</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-1420" y="2960"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1320" y="3240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1320" y="3460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Cycle 1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Cycle 2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3540"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -4133,7 +4195,17 @@ combinatorial logic</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="-1600" y="3120"/>
+      <pos x="-1620" y="3300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1620" y="3500"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -4442,8 +4514,8 @@ combinatorial logic</string>
       <p2 x="900" y="3100"/>
     </wire>
     <wire>
-      <p1 x="-1600" y="3100"/>
-      <p2 x="-1480" y="3100"/>
+      <p1 x="-1520" y="3100"/>
+      <p2 x="-1440" y="3100"/>
     </wire>
     <wire>
       <p1 x="620" y="3100"/>
@@ -4566,8 +4638,8 @@ combinatorial logic</string>
       <p2 x="580" y="3120"/>
     </wire>
     <wire>
-      <p1 x="-1500" y="3120"/>
-      <p2 x="-1480" y="3120"/>
+      <p1 x="-1480" y="3120"/>
+      <p2 x="-1400" y="3120"/>
     </wire>
     <wire>
       <p1 x="1000" y="3120"/>
@@ -4672,10 +4744,6 @@ combinatorial logic</string>
     <wire>
       <p1 x="480" y="3140"/>
       <p2 x="500" y="3140"/>
-    </wire>
-    <wire>
-      <p1 x="-1520" y="3140"/>
-      <p2 x="-1500" y="3140"/>
     </wire>
     <wire>
       <p1 x="-380" y="-2120"/>
@@ -4802,12 +4870,8 @@ combinatorial logic</string>
       <p2 x="-1280" y="3160"/>
     </wire>
     <wire>
-      <p1 x="-1920" y="3160"/>
-      <p2 x="-1600" y="3160"/>
-    </wire>
-    <wire>
       <p1 x="-1280" y="3160"/>
-      <p2 x="-840" y="3160"/>
+      <p2 x="-1160" y="3160"/>
     </wire>
     <wire>
       <p1 x="-580" y="-2140"/>
@@ -5031,7 +5095,7 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1200" y="3200"/>
-      <p2 x="-840" y="3200"/>
+      <p2 x="-1160" y="3200"/>
     </wire>
     <wire>
       <p1 x="-1580" y="7300"/>
@@ -5262,8 +5326,16 @@ combinatorial logic</string>
       <p2 x="-840" y="4260"/>
     </wire>
     <wire>
+      <p1 x="-1320" y="3240"/>
+      <p2 x="-1280" y="3240"/>
+    </wire>
+    <wire>
       <p1 x="-300" y="3240"/>
       <p2 x="800" y="3240"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3240"/>
+      <p2 x="-720" y="3240"/>
     </wire>
     <wire>
       <p1 x="-440" y="-2220"/>
@@ -5542,12 +5614,8 @@ combinatorial logic</string>
       <p2 x="840" y="3280"/>
     </wire>
     <wire>
-      <p1 x="-1320" y="3280"/>
-      <p2 x="-1280" y="3280"/>
-    </wire>
-    <wire>
-      <p1 x="-1280" y="3280"/>
-      <p2 x="-1160" y="3280"/>
+      <p1 x="-1200" y="3280"/>
+      <p2 x="-720" y="3280"/>
     </wire>
     <wire>
       <p1 x="-360" y="-2260"/>
@@ -5628,6 +5696,14 @@ combinatorial logic</string>
     <wire>
       <p1 x="-360" y="3300"/>
       <p2 x="860" y="3300"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="3300"/>
+      <p2 x="-1280" y="3300"/>
+    </wire>
+    <wire>
+      <p1 x="-1840" y="3300"/>
+      <p2 x="-1620" y="3300"/>
     </wire>
     <wire>
       <p1 x="120" y="2280"/>
@@ -5726,12 +5802,8 @@ combinatorial logic</string>
       <p2 x="880" y="3320"/>
     </wire>
     <wire>
-      <p1 x="-1520" y="3320"/>
-      <p2 x="-1440" y="3320"/>
-    </wire>
-    <wire>
-      <p1 x="-1200" y="3320"/>
-      <p2 x="-1160" y="3320"/>
+      <p1 x="-1540" y="3320"/>
+      <p2 x="-1300" y="3320"/>
     </wire>
     <wire>
       <p1 x="140" y="2300"/>
@@ -5850,12 +5922,8 @@ combinatorial logic</string>
       <p2 x="900" y="3340"/>
     </wire>
     <wire>
-      <p1 x="-1480" y="3340"/>
-      <p2 x="-1400" y="3340"/>
-    </wire>
-    <wire>
-      <p1 x="-1300" y="3340"/>
-      <p2 x="-1280" y="3340"/>
+      <p1 x="-1640" y="3340"/>
+      <p2 x="-1620" y="3340"/>
     </wire>
     <wire>
       <p1 x="160" y="2320"/>
@@ -6098,8 +6166,12 @@ combinatorial logic</string>
       <p2 x="500" y="4400"/>
     </wire>
     <wire>
-      <p1 x="-1300" y="3380"/>
-      <p2 x="-1220" y="3380"/>
+      <p1 x="-1320" y="3380"/>
+      <p2 x="-1280" y="3380"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3380"/>
+      <p2 x="-1140" y="3380"/>
     </wire>
     <wire>
       <p1 x="200" y="2360"/>
@@ -6338,6 +6410,10 @@ combinatorial logic</string>
       <p2 x="-660" y="4440"/>
     </wire>
     <wire>
+      <p1 x="-1200" y="3420"/>
+      <p2 x="-1140" y="3420"/>
+    </wire>
+    <wire>
       <p1 x="-440" y="2400"/>
       <p2 x="1840" y="2400"/>
     </wire>
@@ -6432,6 +6508,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="500" y="4460"/>
       <p2 x="540" y="4460"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="3440"/>
+      <p2 x="-1280" y="3440"/>
     </wire>
     <wire>
       <p1 x="-140" y="-2420"/>
@@ -6578,8 +6658,12 @@ combinatorial logic</string>
       <p2 x="1000" y="3460"/>
     </wire>
     <wire>
-      <p1 x="-1420" y="3460"/>
-      <p2 x="-1380" y="3460"/>
+      <p1 x="-1320" y="3460"/>
+      <p2 x="-1280" y="3460"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3460"/>
+      <p2 x="-840" y="3460"/>
     </wire>
     <wire>
       <p1 x="640" y="2440"/>
@@ -6746,12 +6830,16 @@ combinatorial logic</string>
       <p2 x="280" y="4520"/>
     </wire>
     <wire>
+      <p1 x="-1200" y="3500"/>
+      <p2 x="-840" y="3500"/>
+    </wire>
+    <wire>
       <p1 x="300" y="3500"/>
       <p2 x="1080" y="3500"/>
     </wire>
     <wire>
-      <p1 x="-1940" y="3500"/>
-      <p2 x="-1380" y="3500"/>
+      <p1 x="-1880" y="3500"/>
+      <p2 x="-1620" y="3500"/>
     </wire>
     <wire>
       <p1 x="-1160" y="2480"/>
@@ -6816,6 +6904,14 @@ combinatorial logic</string>
     <wire>
       <p1 x="280" y="3520"/>
       <p2 x="1120" y="3520"/>
+    </wire>
+    <wire>
+      <p1 x="-1540" y="3520"/>
+      <p2 x="-1300" y="3520"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="3520"/>
+      <p2 x="-1280" y="3520"/>
     </wire>
     <wire>
       <p1 x="-1780" y="2500"/>
@@ -6904,6 +7000,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="260" y="3540"/>
       <p2 x="1160" y="3540"/>
+    </wire>
+    <wire>
+      <p1 x="-1640" y="3540"/>
+      <p2 x="-1620" y="3540"/>
     </wire>
     <wire>
       <p1 x="640" y="2520"/>
@@ -7170,6 +7270,10 @@ combinatorial logic</string>
       <p2 x="1240" y="3580"/>
     </wire>
     <wire>
+      <p1 x="-1940" y="3580"/>
+      <p2 x="-1460" y="3580"/>
+    </wire>
+    <wire>
       <p1 x="200" y="2560"/>
       <p2 x="420" y="2560"/>
     </wire>
@@ -7334,10 +7438,6 @@ combinatorial logic</string>
       <p2 x="540" y="4640"/>
     </wire>
     <wire>
-      <p1 x="-1500" y="3620"/>
-      <p2 x="-1380" y="3620"/>
-    </wire>
-    <wire>
       <p1 x="640" y="2600"/>
       <p2 x="680" y="2600"/>
     </wire>
@@ -7412,6 +7512,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="-160" y="4660"/>
       <p2 x="80" y="4660"/>
+    </wire>
+    <wire>
+      <p1 x="-1920" y="3640"/>
+      <p2 x="-1540" y="3640"/>
     </wire>
     <wire>
       <p1 x="180" y="2620"/>
@@ -7502,8 +7606,8 @@ combinatorial logic</string>
       <p2 x="500" y="4680"/>
     </wire>
     <wire>
-      <p1 x="-1920" y="3660"/>
-      <p2 x="-1380" y="3660"/>
+      <p1 x="-1460" y="3660"/>
+      <p2 x="-1440" y="3660"/>
     </wire>
     <wire>
       <p1 x="220" y="2640"/>
@@ -7978,6 +8082,10 @@ combinatorial logic</string>
       <p2 x="1820" y="3740"/>
     </wire>
     <wire>
+      <p1 x="-1520" y="3740"/>
+      <p2 x="-1500" y="3740"/>
+    </wire>
+    <wire>
       <p1 x="240" y="2720"/>
       <p2 x="420" y="2720"/>
     </wire>
@@ -8426,6 +8534,10 @@ combinatorial logic</string>
       <p2 x="640" y="4840"/>
     </wire>
     <wire>
+      <p1 x="-1640" y="3820"/>
+      <p2 x="-1480" y="3820"/>
+    </wire>
+    <wire>
       <p1 x="-1060" y="2800"/>
       <p2 x="-980" y="2800"/>
     </wire>
@@ -8551,7 +8663,7 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1880" y="2820"/>
-      <p2 x="-1620" y="2820"/>
+      <p2 x="-1640" y="2820"/>
     </wire>
     <wire>
       <p1 x="-1140" y="2820"/>
@@ -8658,7 +8770,7 @@ combinatorial logic</string>
       <p2 x="-1840" y="2840"/>
     </wire>
     <wire>
-      <p1 x="-1540" y="2840"/>
+      <p1 x="-1560" y="2840"/>
       <p2 x="-1520" y="2840"/>
     </wire>
     <wire>
@@ -8671,7 +8783,7 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1840" y="2840"/>
-      <p2 x="-1680" y="2840"/>
+      <p2 x="-1700" y="2840"/>
     </wire>
     <wire>
       <p1 x="-1120" y="2840"/>
@@ -8770,8 +8882,8 @@ combinatorial logic</string>
       <p2 x="840" y="2860"/>
     </wire>
     <wire>
-      <p1 x="-1680" y="2860"/>
-      <p2 x="-1660" y="2860"/>
+      <p1 x="-1700" y="2860"/>
+      <p2 x="-1680" y="2860"/>
     </wire>
     <wire>
       <p1 x="-1460" y="2860"/>
@@ -9662,10 +9774,6 @@ combinatorial logic</string>
       <p2 x="640" y="4060"/>
     </wire>
     <wire>
-      <p1 x="-1480" y="3040"/>
-      <p2 x="-1460" y="3040"/>
-    </wire>
-    <wire>
       <p1 x="1600" y="3040"/>
       <p2 x="1620" y="3040"/>
     </wire>
@@ -10254,10 +10362,6 @@ combinatorial logic</string>
       <p2 x="-1600" y="7320"/>
     </wire>
     <wire>
-      <p1 x="-1600" y="3100"/>
-      <p2 x="-1600" y="3120"/>
-    </wire>
-    <wire>
       <p1 x="-1600" y="7320"/>
       <p2 x="-1600" y="7500"/>
     </wire>
@@ -10686,6 +10790,14 @@ combinatorial logic</string>
       <p2 x="-1640" y="7360"/>
     </wire>
     <wire>
+      <p1 x="-1640" y="3340"/>
+      <p2 x="-1640" y="3540"/>
+    </wire>
+    <wire>
+      <p1 x="-1640" y="3540"/>
+      <p2 x="-1640" y="3820"/>
+    </wire>
+    <wire>
       <p1 x="-1640" y="7360"/>
       <p2 x="-1640" y="7500"/>
     </wire>
@@ -10846,7 +10958,7 @@ combinatorial logic</string>
       <p2 x="2160" y="6200"/>
     </wire>
     <wire>
-      <p1 x="-1140" y="2980"/>
+      <p1 x="-1140" y="3420"/>
       <p2 x="-1140" y="3960"/>
     </wire>
     <wire>
@@ -10912,6 +11024,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="-1140" y="-460"/>
       <p2 x="-1140" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-1140" y="2980"/>
+      <p2 x="-1140" y="3380"/>
     </wire>
     <wire>
       <p1 x="-1140" y="6860"/>
@@ -11390,12 +11506,12 @@ combinatorial logic</string>
       <p2 x="-1160" y="-340"/>
     </wire>
     <wire>
-      <p1 x="-1160" y="2980"/>
-      <p2 x="-1160" y="3280"/>
+      <p1 x="-1160" y="3200"/>
+      <p2 x="-1160" y="3940"/>
     </wire>
     <wire>
-      <p1 x="-1160" y="3320"/>
-      <p2 x="-1160" y="3940"/>
+      <p1 x="-1160" y="2980"/>
+      <p2 x="-1160" y="3160"/>
     </wire>
     <wire>
       <p1 x="-1160" y="6880"/>
@@ -11572,10 +11688,6 @@ combinatorial logic</string>
     <wire>
       <p1 x="140" y="3700"/>
       <p2 x="140" y="3800"/>
-    </wire>
-    <wire>
-      <p1 x="-1680" y="2840"/>
-      <p2 x="-1680" y="2860"/>
     </wire>
     <wire>
       <p1 x="-1680" y="-1600"/>
@@ -12042,6 +12154,10 @@ combinatorial logic</string>
       <p2 x="160" y="-2380"/>
     </wire>
     <wire>
+      <p1 x="-1700" y="2840"/>
+      <p2 x="-1700" y="2860"/>
+    </wire>
+    <wire>
       <p1 x="-1700" y="2560"/>
       <p2 x="-1700" y="2580"/>
     </wire>
@@ -12466,10 +12582,6 @@ combinatorial logic</string>
       <p2 x="-2240" y="5920"/>
     </wire>
     <wire>
-      <p1 x="-1220" y="3380"/>
-      <p2 x="-1220" y="3500"/>
-    </wire>
-    <wire>
       <p1 x="-1220" y="4360"/>
       <p2 x="-1220" y="6940"/>
     </wire>
@@ -12546,7 +12658,7 @@ combinatorial logic</string>
       <p2 x="1740" y="2980"/>
     </wire>
     <wire>
-      <p1 x="-720" y="2980"/>
+      <p1 x="-720" y="3280"/>
       <p2 x="-720" y="4380"/>
     </wire>
     <wire>
@@ -12556,6 +12668,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="-720" y="6700"/>
       <p2 x="-720" y="7020"/>
+    </wire>
+    <wire>
+      <p1 x="-720" y="2980"/>
+      <p2 x="-720" y="3240"/>
     </wire>
     <wire>
       <p1 x="-720" y="700"/>
@@ -12902,8 +13018,16 @@ combinatorial logic</string>
       <p2 x="-1280" y="3100"/>
     </wire>
     <wire>
-      <p1 x="-1280" y="3280"/>
-      <p2 x="-1280" y="3300"/>
+      <p1 x="-1280" y="3380"/>
+      <p2 x="-1280" y="3400"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3240"/>
+      <p2 x="-1280" y="3260"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3460"/>
+      <p2 x="-1280" y="3480"/>
     </wire>
     <wire>
       <p1 x="-1280" y="3160"/>
@@ -13162,10 +13286,6 @@ combinatorial logic</string>
       <p2 x="-2320" y="6000"/>
     </wire>
     <wire>
-      <p1 x="-1300" y="3520"/>
-      <p2 x="-1300" y="3640"/>
-    </wire>
-    <wire>
       <p1 x="-1300" y="4280"/>
       <p2 x="-1300" y="7020"/>
     </wire>
@@ -13175,11 +13295,15 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1300" y="3220"/>
-      <p2 x="-1300" y="3340"/>
+      <p2 x="-1300" y="3300"/>
     </wire>
     <wire>
-      <p1 x="-1300" y="3340"/>
-      <p2 x="-1300" y="3380"/>
+      <p1 x="-1300" y="3440"/>
+      <p2 x="-1300" y="3520"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="3300"/>
+      <p2 x="-1300" y="3320"/>
     </wire>
     <wire>
       <p1 x="-1300" y="7020"/>
@@ -13538,6 +13662,10 @@ combinatorial logic</string>
       <p2 x="-1840" y="80"/>
     </wire>
     <wire>
+      <p1 x="-1840" y="2840"/>
+      <p2 x="-1840" y="3300"/>
+    </wire>
+    <wire>
       <p1 x="1840" y="3720"/>
       <p2 x="1840" y="5880"/>
     </wire>
@@ -13719,10 +13847,10 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-840" y="2980"/>
-      <p2 x="-840" y="3160"/>
+      <p2 x="-840" y="3460"/>
     </wire>
     <wire>
-      <p1 x="-840" y="3200"/>
+      <p1 x="-840" y="3500"/>
       <p2 x="-840" y="4260"/>
     </wire>
     <wire>
@@ -13836,6 +13964,10 @@ combinatorial logic</string>
     <wire>
       <p1 x="-1880" y="-1040"/>
       <p2 x="-1880" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="-1880" y="2820"/>
+      <p2 x="-1880" y="3500"/>
     </wire>
     <wire>
       <p1 x="1880" y="3680"/>
@@ -14023,7 +14155,7 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1400" y="2800"/>
-      <p2 x="-1400" y="3340"/>
+      <p2 x="-1400" y="3120"/>
     </wire>
     <wire>
       <p1 x="-1400" y="4180"/>
@@ -14130,12 +14262,8 @@ combinatorial logic</string>
       <p2 x="-1920" y="3080"/>
     </wire>
     <wire>
-      <p1 x="-1920" y="3660"/>
+      <p1 x="-1920" y="3640"/>
       <p2 x="-1920" y="6300"/>
-    </wire>
-    <wire>
-      <p1 x="-1920" y="3080"/>
-      <p2 x="-1920" y="3160"/>
     </wire>
     <wire>
       <p1 x="1920" y="2420"/>
@@ -14191,7 +14319,7 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1420" y="2820"/>
-      <p2 x="-1420" y="3220"/>
+      <p2 x="-1420" y="2960"/>
     </wire>
     <wire>
       <p1 x="-1420" y="4160"/>
@@ -14202,8 +14330,8 @@ combinatorial logic</string>
       <p2 x="-1420" y="660"/>
     </wire>
     <wire>
-      <p1 x="-1420" y="3440"/>
-      <p2 x="-1420" y="3460"/>
+      <p1 x="-1420" y="3220"/>
+      <p2 x="-1420" y="3580"/>
     </wire>
     <wire>
       <p1 x="-1420" y="-1720"/>
@@ -14374,7 +14502,7 @@ combinatorial logic</string>
       <p2 x="400" y="-140"/>
     </wire>
     <wire>
-      <p1 x="-1940" y="3500"/>
+      <p1 x="-1940" y="3580"/>
       <p2 x="-1940" y="6280"/>
     </wire>
     <wire>
@@ -14435,15 +14563,15 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1440" y="2840"/>
-      <p2 x="-1440" y="3120"/>
+      <p2 x="-1440" y="2960"/>
     </wire>
     <wire>
-      <p1 x="-1440" y="3300"/>
-      <p2 x="-1440" y="3320"/>
+      <p1 x="-1440" y="3040"/>
+      <p2 x="-1440" y="3100"/>
     </wire>
     <wire>
-      <p1 x="-1440" y="3320"/>
-      <p2 x="-1440" y="3360"/>
+      <p1 x="-1440" y="3100"/>
+      <p2 x="-1440" y="3140"/>
     </wire>
     <wire>
       <p1 x="-1440" y="7160"/>
@@ -14639,11 +14767,11 @@ combinatorial logic</string>
     </wire>
     <wire>
       <p1 x="-1460" y="2860"/>
-      <p2 x="-1460" y="3040"/>
+      <p2 x="-1460" y="2960"/>
     </wire>
     <wire>
-      <p1 x="-1460" y="3200"/>
-      <p2 x="-1460" y="3220"/>
+      <p1 x="-1460" y="3660"/>
+      <p2 x="-1460" y="3740"/>
     </wire>
     <wire>
       <p1 x="-1460" y="7180"/>
@@ -14854,12 +14982,8 @@ combinatorial logic</string>
       <p2 x="-1480" y="720"/>
     </wire>
     <wire>
-      <p1 x="-1480" y="3040"/>
-      <p2 x="-1480" y="3100"/>
-    </wire>
-    <wire>
-      <p1 x="-1480" y="3340"/>
-      <p2 x="-1480" y="3360"/>
+      <p1 x="-1480" y="3120"/>
+      <p2 x="-1480" y="3140"/>
     </wire>
     <wire>
       <p1 x="-1480" y="7200"/>
@@ -14906,12 +15030,8 @@ combinatorial logic</string>
       <p2 x="-1500" y="7220"/>
     </wire>
     <wire>
-      <p1 x="-1500" y="3440"/>
-      <p2 x="-1500" y="3620"/>
-    </wire>
-    <wire>
-      <p1 x="-1500" y="3120"/>
-      <p2 x="-1500" y="3140"/>
+      <p1 x="-1500" y="3220"/>
+      <p2 x="-1500" y="3640"/>
     </wire>
     <wire>
       <p1 x="-1500" y="7220"/>
@@ -15098,8 +15218,12 @@ combinatorial logic</string>
       <p2 x="-1520" y="7240"/>
     </wire>
     <wire>
-      <p1 x="-1520" y="3320"/>
-      <p2 x="-1520" y="3360"/>
+      <p1 x="-1520" y="3100"/>
+      <p2 x="-1520" y="3140"/>
+    </wire>
+    <wire>
+      <p1 x="-1520" y="3720"/>
+      <p2 x="-1520" y="3740"/>
     </wire>
     <wire>
       <p1 x="-1520" y="7240"/>

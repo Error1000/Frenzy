@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1616845854 source:/home/dan/Documents/Coding/Digital/Frenzy/sam/main.cpp
+	<fstream>
+	<assert.h>
+	<sstream>
+	<vector>
+	<map>
+	<string>
+	<algorithm>
+	<iostream>
+

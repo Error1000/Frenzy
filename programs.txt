@@ -1,0 +1,65 @@
+#define TOA   0x1 ( immediate is address to val )
+#define TOB   0x2 ( immediate is address to val )
+#define SUM   0x3 ( immediate is ignored )
+#define SUB   0x4 ( immediate is ignored )
+#define FROMA 0x5 ( immediate is address to location to store A )
+#define FROMB 0x6 ( immediate is address to location to store B )
+#define JMP   0x7 ( immediate is address to address to jump to  )
+#define INCA  0x8 ( immediate is ignored )
+#define INCB  0x9 ( immediate is ignored )
+#define DECA  0xA ( immediate is ignored )
+#define DECB  0xB ( immediate is ignored )
+#define NEGA  0xC ( immediate is ignored )
+#define NEGB  0xD ( immediate is ignored )
+#define JMPC  0xE ( immediate is address to address to jump to  )
+#define JMPZ  0xF ( immediate is address to address to jump to  )
+
+
+Mem size: 0x00 .. 0xff
+
+
+Multiply
+
+Pseudo-C:
+===========
+// NOTE: Arch needs one reg to be 0 for the flag saving to be accurate if updating only one register
+// NOTE: Doing math with memory locations needs to go through registers first
+// NOTE: Not quite 100% efficent as it wastes the first loop cycle essentally due to indexing from zero
+int main(){
+	
+	volatile int cache;     
+	volatile int val1 = 3;  
+	volatile int val2 = 23; 
+
+	volatile register A = 0, B = 0; 
+
+
+	do{
+		// Essentailly does cache += val2; but again has to go through registers dues to architecture
+		B = val2; // Init b
+		A += B;
+		cache = A; // Save A
+
+
+		A = 0; // Prepare A for doing B -= 1, because arch needs A = 0 to save zero flag for B corrrectlly
+
+		{ // This essentially does val1--; but it has to go through registers first due to architecture
+			B = val1; // Load B
+			B -= 1; // Sub B
+			val1 = B; // Save B
+		}
+
+
+		A = cache; // Restore A
+
+		if(B == 0) break; // Do if
+	} while(true);
+
+	while(true);	
+}
+
+
+
+
+
+
