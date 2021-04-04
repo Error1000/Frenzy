@@ -36,7 +36,7 @@ inline void panic(string s){
 }
 
 enum Instruction : uint8_t{
-    NOOP, TOA, TOB, SUM, SUB, FROMA, FROMB, JMP, CHNGA, CHNGB,     JMPC=0xE, JMPZ
+    NOOP, TOA, TOB, SUM, SUB, FROMA, FROMB, JMP, CHNGA, CHNGB, AND,    JMPC=0xE, JMPZ
 };
 map<string, Instruction> inst_mnemonics = {
 
@@ -49,6 +49,7 @@ map<string, Instruction> inst_mnemonics = {
     { "JMP", JMP },
     { "CHNGA", CHNGA },
     { "CHNGB", CHNGB },
+    { "AND",   AND },
     { "JMPC", JMPC },
     { "JMPZ", JMPZ },
 
