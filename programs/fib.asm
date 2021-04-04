@@ -1,10 +1,7 @@
-; Instruction set:
-; TOA, TOB, SUM, SUB, FROMA, FROMB, JMP, INCA, INCB, DECA, DECB, NEGA, NEGB, JMPC, JMPZ
-
 ;;;;;;;;;;;;;;;;;;;;;; HEADER
 ; NOTE: There cannot be more than 16 statements in the header
-INCA
-INCB
+CHNGA 0x1
+CHNGB 0x1
 JMP {OUTSIDE_ADDR} ; ESCAPE HEADER
 OUTSIDE_ADDR: {OUTSIDE} ; Store the location of the OUTSIDE label at some address and save that address int OUTSIDE_ADDR
 
