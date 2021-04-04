@@ -16,6 +16,7 @@ MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
 
 */
 
+#define ALUAND          0b00100000000000000000000000000000
 #define ACNTRLLINEMOD   0b00010000000000000000000000000000
 #define BCNTRLLINEMOD   0b00001000000000000000000000000000
 
@@ -55,33 +56,15 @@ MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
 
 #define IRLOAD          0b00000000000000000000000000000001
 
-/*
-/// TODO: Merge INCX, DECX, NEGX, into a single CHNGX with an immediate. ( will require 2 extra control lines )
-DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
-0     1   2    3     4      5        6      7
 
-Normally: 1. no LOAD, 2. LOAD
-and these:
-CASCADEMOD, CLKMOD, DEF, INMOD
-SET0:   0, 0, 0, 0
-SETFF:  0, 0, 1, 0
-INV:    0, 0, 1, 1
-SETLB1: 0, 1, 1, 0 // CLKMOD is on, and DEF = 1, hopefully OR1 without sidefects
-INC:    0, 1, 1, 1
-SETLB0: 1, 1, 0, 0 // CLKMOD = 1, but no INMOD, so this basically means all ops only affect the first bit
-DEC:    1, 1, 1, 1
 
-Except for NEG:
-where 1. no CLKMOD, 2. CLKMOD
-DEF, LOAD, INMOD
 
 /// TODO: Add an AND instruction. ( will require 1 extra control line )
-/// TODO: Add a simple register that doesn't have CHNG, only TO and FROM. ( will require 2 extra control line )
 
-*/
+
 
 /// WARNING: You can't have more than one of the following "control lines" as they are "compressed"
-#define NONE 0
+#define NONE   (    0 |     0 |     0)
 #define IRENO  (    0 |     0 | SQSH0)
 #define RAMENO (    0 | SQSH1 |     0)
 #define MARENO (    0 | SQSH1 | SQSH0)
@@ -108,6 +91,26 @@ DEF, LOAD, INMOD
 #define JMP   0x7
 #define CHNGA 0x8
 #define CHNGB 0x9
+#define AND   0xA
+/*
+DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
+0     1   2    3     4      5        6      7
+
+Normally: 1. no LOAD, 2. LOAD
+and these:
+CASCADEMOD, CLKMOD, DEF, INMOD
+SET0:   0, 0, 0, 0
+SETFF:  0, 0, 1, 0
+INV:    0, 0, 1, 1
+SETLB1: 0, 1, 1, 0 // CLKMOD is on, and DEF = 1, hopefully OR1 without sidefects
+INC:    0, 1, 1, 1
+SETLB0: 1, 1, 0, 0 // CLKMOD = 1, but no INMOD, so this basically means all ops only affect the first bit
+DEC:    1, 1, 1, 1
+
+Except for NEG:
+where 1. no CLKMOD, 2. CLKMOD
+DEF, LOAD, INMOD
+*/
 
 // 4 free instructions
 
@@ -173,7 +176,7 @@ int main(){
 
     */
     rom[CHNGA|STEP_3]  = IRENO  | ACNTRLLINEMOD;
-    rom[CHNGA|STEP_4]  = IRENO  | ACNTRLLINEMOD;
+    rom[CHNGA|STEP_4]  = IRENO  | ACNTRLLINEMOD | FEN;
 
     /// Take action on B based on immediate
     /*
@@ -189,8 +192,11 @@ int main(){
 
     */
     rom[CHNGB|STEP_3]  = IRENO  | BCNTRLLINEMOD;
-    rom[CHNGB|STEP_4]  = IRENO  | BCNTRLLINEMOD;
+    rom[CHNGB|STEP_4]  = IRENO  | BCNTRLLINEMOD | FEN;
 
+
+    rom[AND|STEP_3]    = ALUAND | ALUENO | ALOAD | FEN;
+    rom[AND|STEP_4]    = 0;
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size
     /// So because of that external logic, we kind of have to set this to 0
 

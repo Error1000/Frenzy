@@ -36,7 +36,7 @@ inline void panic(string s){
 }
 
 enum Instruction : uint8_t{
-    TOA = 1, TOB, SUM, SUB, FROMA, FROMB, JMP, INCA, INCB, DECA, DECB, NEGA, NEGB, JMPC, JMPZ
+    NOOP, TOA, TOB, SUM, SUB, FROMA, FROMB, JMP, CHNGA, CHNGB,     JMPC=0xE, JMPZ
 };
 map<string, Instruction> inst_mnemonics = {
 
@@ -47,12 +47,8 @@ map<string, Instruction> inst_mnemonics = {
     { "FROMA", FROMA },
     { "FROMB", FROMB },
     { "JMP", JMP },
-    { "INCA", INCA },
-    { "INCB", INCB },
-    { "DECA", DECA },
-    { "DECB", DECB },
-    { "NEGA", NEGA },
-    { "NEGB", NEGB },
+    { "CHNGA", CHNGA },
+    { "CHNGB", CHNGB },
     { "JMPC", JMPC },
     { "JMPZ", JMPZ },
 
@@ -132,11 +128,14 @@ curr_addr = 0;
 
 for(string line : file){
     string buf;
+    string backup;
+    /// Parse numbers and addrs
     bool is_hex = false;
+    bool contains_lead = false;
     for(char c : line){
         if(c == '#') break;
         if(c == ';') break;
-        if(c == 'x'){ is_hex = true; buf = ""; }
+        if(c == 'x'){ is_hex = true; backup += buf +"x"; buf = ""; }
         if(c == ':'){
             if(is_hex){
                 int a = -1;
@@ -149,13 +148,18 @@ for(string line : file){
             } else{
                  buf = "";
             }
+            contains_lead = true;
         }
 
         if(c != ':' && c != 'x') buf += c;
     }
+    if(!contains_lead && is_hex){
+        buf = backup + buf;
+        is_hex = false;
+    }
     trim(buf);
     if(buf == "") continue;
-
+    /// Parse rest
     // Now parse actual thing knowing a
     if(is_hex){
         // Insert data
