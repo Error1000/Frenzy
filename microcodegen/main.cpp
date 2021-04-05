@@ -58,11 +58,6 @@ MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
 
 
 
-
-/// TODO: Add an AND instruction. ( will require 1 extra control line )
-
-
-
 /// WARNING: You can't have more than one of the following "control lines" as they are "compressed"
 #define NONE   (    0 |     0 |     0)
 #define IRENO  (    0 |     0 | SQSH0)
@@ -112,7 +107,7 @@ where 1. no CLKMOD, 2. CLKMOD
 DEF, LOAD, INMOD
 */
 
-// 4 free instructions
+// 3 free instructions
 
 #define JMPC  0xE
 #define JMPZ  0xF
@@ -157,9 +152,9 @@ int main(){
     rom[FROMB|STEP_3]  = IRENO  | MARLOAD;
     rom[FROMB|STEP_4]  = BENO   | RAMLOAD;
 
-    /// Go to address at address from immediate
+    /// Go to address at address that's in the next byte to JMP in memory
     /// A.K.A: goto immediate;
-    rom[JMP|STEP_3]    = IRENO  | MARLOAD;
+    rom[JMP|STEP_3]    = PCENO  | MARLOAD;
     rom[JMP|STEP_4]    = RAMENO | PCLOAD;
 
     /// Take action on A based on immediate
@@ -200,13 +195,14 @@ int main(){
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size
     /// So because of that external logic, we kind of have to set this to 0
 
+    /// SINCE JMP is 2 bytes we need to do another add again for the CPU, if we didn't jump
     /// if(alu == 0) goto immediate;
-    rom[JMPZ|STEP_3]   = 0; // IRENO  | MARLOAD
-    rom[JMPZ|STEP_4]   = 0; // RAMENO | PCLOAD
+    rom[JMPZ|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // PCENO  | MARLOAD
+    rom[JMPZ|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // RAMENO | PCLOAD
 
     /// if(alu_carray == 1) goto immediate;
-    rom[JMPC|STEP_3]   = 0; // IRENO  | MARLOAD
-    rom[JMPC|STEP_4]   = 0; // RAMENO | PCLOAD
+    rom[JMPC|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // PCENO  | MARLOAD
+    rom[JMPC|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // RAMENO | PCLOAD
 
     f.write((char*)rom, sizeof(uint32_t)*((1<<5)));
 }

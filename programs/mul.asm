@@ -1,8 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;; HEADER
 ; NOTE: There cannot be more than 16 statements in the header
-JMP {OUTSIDE_ADDR} ; ESCAPE HEADER
-OUTSIDE_ADDR: {OUTSIDE} ; Store the location of the OUTSIDE label at some address and save that address int OUTSIDE_ADDR
-END_LOOP_ADDR: {END_LOOP}
+JMP 
+{OUTSIDE} ; ESCAPE HEADER
 ;-----------------
 cache: 0x00
 val1: 0x04
@@ -24,8 +23,11 @@ OUTSIDE:
 
     TOA {cache} 		; A = cache
 
-    JMPZ {END_LOOP_ADDR}		; if(B == 0) break;
+    JMPZ 
+    {HLT}		; if(B == 0) break;
 
-JMP {OUTSIDE_ADDR}		; } while(true);
+JMP 
+{OUTSIDE}		; } while(true);
 
-END_LOOP: JMP {END_LOOP_ADDR} ; while(true);
+HLT: JMP 
+     {HLT} ; while(true);

@@ -721,6 +721,10 @@
           <string>Label</string>
           <string>CLK</string>
         </entry>
+        <entry>
+          <string>Frequency</string>
+          <int>5</int>
+        </entry>
       </elementAttributes>
       <pos x="-580" y="-2500"/>
     </visualElement>
@@ -3330,8 +3334,9 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>0,2000008,2000008,5804000,1c0000,2000008,2000008,2000008,12000000,a000000,25804000,
-0,0,0,0,0,0,1004000,1100000,0,5824000,2800040,3800040,1000200,16000000,e000000</data>
+          <data>0,2000008,2000008,5804000,1c0000,2000008,2000008,800008,12000000,a000000,25804000,
+0,0,0,580,580,0,1004000,1100000,0,5824000,2800040,3800040,1000200,16000000,e000000,
+0,0,0,0,780,780</data>
         </entry>
         <entry>
           <string>lastDataFile</string>
@@ -3866,7 +3871,7 @@ and it&apos;s pretty trivial to optimise this if needed.</string>
           <string>Step 3</string>
         </entry>
       </elementAttributes>
-      <pos x="-1300" y="3340"/>
+      <pos x="-1280" y="3320"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
@@ -3876,7 +3881,7 @@ and it&apos;s pretty trivial to optimise this if needed.</string>
           <string>Step 4</string>
         </entry>
       </elementAttributes>
-      <pos x="-1300" y="3560"/>
+      <pos x="-1280" y="3540"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -4134,7 +4139,7 @@ and it&apos;s pretty trivial to optimise this if needed.</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="380" y="-1740"/>
+      <pos x="380" y="-1720"/>
     </visualElement>
     <visualElement>
       <elementName>Text</elementName>
@@ -4564,7 +4569,7 @@ T Flip-Flop mode is off.</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-1080" y="6680"/>
+      <pos x="-1080" y="6720"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
@@ -4669,7 +4674,7 @@ ACNTRLLINEMOD is on</string>
           <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="-920" y="6700"/>
+      <pos x="-920" y="6720"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
@@ -5422,6 +5427,109 @@ ACNTRLLINEMOD is on</string>
       <elementAttributes/>
       <pos x="-1720" y="7520"/>
     </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes/>
+      <pos x="-1280" y="3600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes/>
+      <pos x="-1280" y="3680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes/>
+      <pos x="-1280" y="3760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1320" y="3640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1320" y="3720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1320" y="3800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1340" y="3580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>PullDown</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1280" y="3760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-520" y="6720"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -6130,7 +6238,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-1300" y="3160"/>
-      <p2 x="-1080" y="3160"/>
+      <p2 x="-1040" y="3160"/>
     </wire>
     <wire>
       <p1 x="-260" y="2140"/>
@@ -6386,7 +6494,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-1260" y="3200"/>
-      <p2 x="-1080" y="3200"/>
+      <p2 x="-1040" y="3200"/>
     </wire>
     <wire>
       <p1 x="-1560" y="7300"/>
@@ -7329,16 +7437,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1560" y="4360"/>
     </wire>
     <wire>
-      <p1 x="-1540" y="3340"/>
-      <p2 x="-1320" y="3340"/>
-    </wire>
-    <wire>
       <p1 x="-400" y="3340"/>
       <p2 x="940" y="3340"/>
     </wire>
     <wire>
+      <p1 x="-1540" y="3340"/>
+      <p2 x="-1400" y="3340"/>
+    </wire>
+    <wire>
       <p1 x="-1320" y="3340"/>
       <p2 x="-1280" y="3340"/>
+    </wire>
+    <wire>
+      <p1 x="-1400" y="3340"/>
+      <p2 x="-1320" y="3340"/>
     </wire>
     <wire>
       <p1 x="-380" y="-2320"/>
@@ -8541,16 +8653,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1700" y="4560"/>
     </wire>
     <wire>
-      <p1 x="-1540" y="3540"/>
-      <p2 x="-1320" y="3540"/>
-    </wire>
-    <wire>
       <p1 x="320" y="3540"/>
       <p2 x="1160" y="3540"/>
     </wire>
     <wire>
+      <p1 x="-1540" y="3540"/>
+      <p2 x="-1340" y="3540"/>
+    </wire>
+    <wire>
       <p1 x="-1320" y="3540"/>
       <p2 x="-1300" y="3540"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3540"/>
+      <p2 x="-1320" y="3540"/>
     </wire>
     <wire>
       <p1 x="660" y="2520"/>
@@ -8615,6 +8731,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="700" y="1500"/>
       <p2 x="740" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="-760" y="6620"/>
+      <p2 x="-700" y="6620"/>
     </wire>
     <wire>
       <p1 x="-1620" y="-480"/>
@@ -8801,12 +8921,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-700" y="1520"/>
     </wire>
     <wire>
-      <p1 x="-760" y="6640"/>
-      <p2 x="-700" y="6640"/>
-    </wire>
-    <wire>
       <p1 x="-800" y="6640"/>
       <p2 x="-780" y="6640"/>
+    </wire>
+    <wire>
+      <p1 x="-640" y="6640"/>
+      <p2 x="-620" y="6640"/>
+    </wire>
+    <wire>
+      <p1 x="-700" y="6640"/>
+      <p2 x="-660" y="6640"/>
+    </wire>
+    <wire>
+      <p1 x="-560" y="6640"/>
+      <p2 x="-500" y="6640"/>
     </wire>
     <wire>
       <p1 x="-1600" y="-500"/>
@@ -8885,6 +9013,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1240" y="3580"/>
     </wire>
     <wire>
+      <p1 x="-1400" y="3580"/>
+      <p2 x="-1380" y="3580"/>
+    </wire>
+    <wire>
       <p1 x="640" y="2560"/>
       <p2 x="1280" y="2560"/>
     </wire>
@@ -8953,18 +9085,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1180" y="1540"/>
     </wire>
     <wire>
-      <p1 x="-700" y="6660"/>
-      <p2 x="-660" y="6660"/>
-    </wire>
-    <wire>
-      <p1 x="-640" y="6660"/>
-      <p2 x="-620" y="6660"/>
-    </wire>
-    <wire>
-      <p1 x="-1060" y="6660"/>
-      <p2 x="-1040" y="6660"/>
-    </wire>
-    <wire>
       <p1 x="-1400" y="-520"/>
       <p2 x="-1160" y="-520"/>
     </wire>
@@ -9003,6 +9123,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-140" y="4620"/>
       <p2 x="60" y="4620"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="3600"/>
+      <p2 x="-720" y="3600"/>
     </wire>
     <wire>
       <p1 x="-1980" y="3600"/>
@@ -9047,10 +9171,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1500" y="1560"/>
       <p2 x="1760" y="1560"/>
-    </wire>
-    <wire>
-      <p1 x="-900" y="6680"/>
-      <p2 x="-880" y="6680"/>
     </wire>
     <wire>
       <p1 x="-1660" y="-540"/>
@@ -9101,6 +9221,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1500" y="4640"/>
     </wire>
     <wire>
+      <p1 x="-1240" y="3620"/>
+      <p2 x="-720" y="3620"/>
+    </wire>
+    <wire>
       <p1 x="660" y="2600"/>
       <p2 x="700" y="2600"/>
     </wire>
@@ -9121,24 +9245,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="580" y="2600"/>
     </wire>
     <wire>
-      <p1 x="-1160" y="1580"/>
-      <p2 x="-1140" y="1580"/>
-    </wire>
-    <wire>
-      <p1 x="-660" y="1580"/>
-      <p2 x="-640" y="1580"/>
-    </wire>
-    <wire>
-      <p1 x="360" y="1580"/>
-      <p2 x="500" y="1580"/>
-    </wire>
-    <wire>
-      <p1 x="1500" y="1580"/>
-      <p2 x="1680" y="1580"/>
-    </wire>
-    <wire>
       <p1 x="-1060" y="6700"/>
       <p2 x="-1040" y="6700"/>
+    </wire>
+    <wire>
+      <p1 x="-900" y="6700"/>
+      <p2 x="-880" y="6700"/>
     </wire>
     <wire>
       <p1 x="-760" y="6700"/>
@@ -9163,6 +9275,22 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="340" y="6700"/>
       <p2 x="360" y="6700"/>
+    </wire>
+    <wire>
+      <p1 x="-1160" y="1580"/>
+      <p2 x="-1140" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="-660" y="1580"/>
+      <p2 x="-640" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="1580"/>
+      <p2 x="500" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="1500" y="1580"/>
+      <p2 x="1680" y="1580"/>
     </wire>
     <wire>
       <p1 x="200" y="-560"/>
@@ -9223,6 +9351,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1280" y="4660"/>
       <p2 x="1380" y="4660"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="3640"/>
+      <p2 x="-1280" y="3640"/>
     </wire>
     <wire>
       <p1 x="-140" y="-2620"/>
@@ -9313,8 +9445,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-700" y="1600"/>
     </wire>
     <wire>
-      <p1 x="-900" y="6720"/>
-      <p2 x="-880" y="6720"/>
+      <p1 x="-640" y="6720"/>
+      <p2 x="-620" y="6720"/>
     </wire>
     <wire>
       <p1 x="220" y="-580"/>
@@ -9377,6 +9509,14 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1320" y="3660"/>
     </wire>
     <wire>
+      <p1 x="-1360" y="3660"/>
+      <p2 x="-1340" y="3660"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3660"/>
+      <p2 x="-1260" y="3660"/>
+    </wire>
+    <wire>
       <p1 x="640" y="2640"/>
       <p2 x="1240" y="2640"/>
     </wire>
@@ -9401,6 +9541,42 @@ ACNTRLLINEMOD is on</string>
       <p2 x="400" y="2640"/>
     </wire>
     <wire>
+      <p1 x="-1060" y="6740"/>
+      <p2 x="-1040" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-900" y="6740"/>
+      <p2 x="-880" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="6740"/>
+      <p2 x="300" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="6740"/>
+      <p2 x="360" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-760" y="6740"/>
+      <p2 x="-740" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-680" y="6740"/>
+      <p2 x="-580" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-700" y="6740"/>
+      <p2 x="-680" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-580" y="6740"/>
+      <p2 x="-560" y="6740"/>
+    </wire>
+    <wire>
+      <p1 x="-740" y="6740"/>
+      <p2 x="-700" y="6740"/>
+    </wire>
+    <wire>
       <p1 x="160" y="1620"/>
       <p2 x="640" y="1620"/>
     </wire>
@@ -9423,30 +9599,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1500" y="1620"/>
       <p2 x="1540" y="1620"/>
-    </wire>
-    <wire>
-      <p1 x="-760" y="6740"/>
-      <p2 x="-740" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="-700" y="6740"/>
-      <p2 x="-680" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="-640" y="6740"/>
-      <p2 x="-620" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="-580" y="6740"/>
-      <p2 x="-560" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="280" y="6740"/>
-      <p2 x="300" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="340" y="6740"/>
-      <p2 x="360" y="6740"/>
     </wire>
     <wire>
       <p1 x="420" y="-600"/>
@@ -9505,6 +9657,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1900" y="3680"/>
     </wire>
     <wire>
+      <p1 x="-1280" y="3680"/>
+      <p2 x="-740" y="3680"/>
+    </wire>
+    <wire>
       <p1 x="1580" y="2660"/>
       <p2 x="1600" y="2660"/>
     </wire>
@@ -9522,6 +9678,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-440" y="-1640"/>
+      <p2 x="140" y="-1640"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="-1640"/>
       <p2 x="440" y="-1640"/>
     </wire>
     <wire>
@@ -9542,6 +9702,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-880" y="6760"/>
+      <p2 x="-520" y="6760"/>
+    </wire>
+    <wire>
+      <p1 x="-520" y="6760"/>
       <p2 x="300" y="6760"/>
     </wire>
     <wire>
@@ -9603,6 +9767,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1520" y="3700"/>
       <p2 x="1880" y="3700"/>
+    </wire>
+    <wire>
+      <p1 x="-1240" y="3700"/>
+      <p2 x="-740" y="3700"/>
     </wire>
     <wire>
       <p1 x="660" y="2680"/>
@@ -9745,6 +9913,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1860" y="3720"/>
     </wire>
     <wire>
+      <p1 x="-1320" y="3720"/>
+      <p2 x="-1280" y="3720"/>
+    </wire>
+    <wire>
       <p1 x="720" y="2700"/>
       <p2 x="840" y="2700"/>
     </wire>
@@ -9822,23 +9994,15 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-620" y="6800"/>
-      <p2 x="-560" y="6800"/>
+      <p2 x="-480" y="6800"/>
     </wire>
     <wire>
       <p1 x="-1040" y="6800"/>
-      <p2 x="-740" y="6800"/>
-    </wire>
-    <wire>
-      <p1 x="-680" y="6800"/>
       <p2 x="-620" y="6800"/>
     </wire>
     <wire>
-      <p1 x="-560" y="6800"/>
+      <p1 x="-480" y="6800"/>
       <p2 x="360" y="6800"/>
-    </wire>
-    <wire>
-      <p1 x="-740" y="6800"/>
-      <p2 x="-680" y="6800"/>
     </wire>
     <wire>
       <p1 x="360" y="-660"/>
@@ -9935,6 +10099,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1680" y="3740"/>
       <p2 x="1840" y="3740"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3740"/>
+      <p2 x="-1260" y="3740"/>
     </wire>
     <wire>
       <p1 x="40" y="2720"/>
@@ -10089,6 +10257,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1820" y="3760"/>
     </wire>
     <wire>
+      <p1 x="-1280" y="3760"/>
+      <p2 x="-780" y="3760"/>
+    </wire>
+    <wire>
       <p1 x="1400" y="2740"/>
       <p2 x="1480" y="2740"/>
     </wire>
@@ -10193,6 +10365,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1800" y="3780"/>
     </wire>
     <wire>
+      <p1 x="-1240" y="3780"/>
+      <p2 x="-780" y="3780"/>
+    </wire>
+    <wire>
       <p1 x="660" y="2760"/>
       <p2 x="700" y="2760"/>
     </wire>
@@ -10283,6 +10459,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="420" y="4820"/>
       <p2 x="460" y="4820"/>
+    </wire>
+    <wire>
+      <p1 x="-1320" y="3800"/>
+      <p2 x="-1280" y="3800"/>
     </wire>
     <wire>
       <p1 x="720" y="2780"/>
@@ -10423,6 +10603,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1300" y="4840"/>
       <p2 x="1360" y="4840"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3820"/>
+      <p2 x="-1260" y="3820"/>
     </wire>
     <wire>
       <p1 x="-1060" y="2800"/>
@@ -10754,10 +10938,6 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-620" y="1820"/>
-      <p2 x="-400" y="1820"/>
-    </wire>
-    <wire>
-      <p1 x="-400" y="1820"/>
       <p2 x="-380" y="1820"/>
     </wire>
     <wire>
@@ -10886,10 +11066,6 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-600" y="1840"/>
-      <p2 x="-380" y="1840"/>
-    </wire>
-    <wire>
-      <p1 x="-380" y="1840"/>
       <p2 x="-360" y="1840"/>
     </wire>
     <wire>
@@ -12153,6 +12329,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-520" y="1920"/>
     </wire>
     <wire>
+      <p1 x="-520" y="6720"/>
+      <p2 x="-520" y="6760"/>
+    </wire>
+    <wire>
       <p1 x="-2060" y="2320"/>
       <p2 x="-2060" y="2440"/>
     </wire>
@@ -12165,15 +12345,19 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1040" y="620"/>
     </wire>
     <wire>
-      <p1 x="-1040" y="6680"/>
-      <p2 x="-1040" y="6700"/>
+      <p1 x="-1040" y="6720"/>
+      <p2 x="-1040" y="6740"/>
     </wire>
     <wire>
-      <p1 x="-1040" y="2980"/>
+      <p1 x="-1040" y="3200"/>
       <p2 x="-1040" y="3980"/>
     </wire>
     <wire>
-      <p1 x="-1040" y="6700"/>
+      <p1 x="-1040" y="2980"/>
+      <p2 x="-1040" y="3160"/>
+    </wire>
+    <wire>
+      <p1 x="-1040" y="6740"/>
       <p2 x="-1040" y="6800"/>
     </wire>
     <wire>
@@ -12333,10 +12517,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1560" y="4740"/>
     </wire>
     <wire>
-      <p1 x="-540" y="5860"/>
-      <p2 x="-540" y="6160"/>
-    </wire>
-    <wire>
       <p1 x="-540" y="-1440"/>
       <p2 x="-540" y="-1300"/>
     </wire>
@@ -12347,6 +12527,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-540" y="1360"/>
       <p2 x="-540" y="1900"/>
+    </wire>
+    <wire>
+      <p1 x="-540" y="5860"/>
+      <p2 x="-540" y="6160"/>
     </wire>
     <wire>
       <p1 x="-540" y="-1300"/>
@@ -12385,8 +12569,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1060" y="5920"/>
     </wire>
     <wire>
-      <p1 x="-1060" y="6660"/>
-      <p2 x="-1060" y="6700"/>
+      <p1 x="-1060" y="6700"/>
+      <p2 x="-1060" y="6740"/>
     </wire>
     <wire>
       <p1 x="-1060" y="3420"/>
@@ -12398,7 +12582,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-1060" y="5920"/>
-      <p2 x="-1060" y="6640"/>
+      <p2 x="-1060" y="6680"/>
     </wire>
     <wire>
       <p1 x="-40" y="1120"/>
@@ -12509,8 +12693,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-560" y="6740"/>
     </wire>
     <wire>
-      <p1 x="-560" y="6740"/>
-      <p2 x="-560" y="6800"/>
+      <p1 x="-560" y="6640"/>
+      <p2 x="-560" y="6700"/>
     </wire>
     <wire>
       <p1 x="560" y="3040"/>
@@ -12541,16 +12725,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="2100" y="6160"/>
     </wire>
     <wire>
-      <p1 x="-1080" y="6680"/>
+      <p1 x="-1080" y="6720"/>
       <p2 x="-1080" y="6880"/>
     </wire>
     <wire>
-      <p1 x="-1080" y="3200"/>
-      <p2 x="-1080" y="3940"/>
-    </wire>
-    <wire>
       <p1 x="-1080" y="2980"/>
-      <p2 x="-1080" y="3160"/>
+      <p2 x="-1080" y="3940"/>
     </wire>
     <wire>
       <p1 x="1080" y="3420"/>
@@ -12713,10 +12893,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-580" y="2960"/>
     </wire>
     <wire>
-      <p1 x="-580" y="5860"/>
-      <p2 x="-580" y="6180"/>
-    </wire>
-    <wire>
       <p1 x="-580" y="500"/>
       <p2 x="-580" y="760"/>
     </wire>
@@ -12733,12 +12909,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-580" y="1860"/>
     </wire>
     <wire>
-      <p1 x="-580" y="6700"/>
-      <p2 x="-580" y="6740"/>
-    </wire>
-    <wire>
       <p1 x="-580" y="2980"/>
       <p2 x="-580" y="4440"/>
+    </wire>
+    <wire>
+      <p1 x="-580" y="5860"/>
+      <p2 x="-580" y="6180"/>
+    </wire>
+    <wire>
+      <p1 x="-580" y="6700"/>
+      <p2 x="-580" y="6740"/>
     </wire>
     <wire>
       <p1 x="-580" y="-1180"/>
@@ -13249,10 +13429,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1640" y="3080"/>
     </wire>
     <wire>
-      <p1 x="-620" y="5860"/>
-      <p2 x="-620" y="6200"/>
-    </wire>
-    <wire>
       <p1 x="-620" y="540"/>
       <p2 x="-620" y="840"/>
     </wire>
@@ -13265,20 +13441,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-620" y="1820"/>
     </wire>
     <wire>
-      <p1 x="-620" y="6720"/>
-      <p2 x="-620" y="6740"/>
-    </wire>
-    <wire>
       <p1 x="-620" y="2980"/>
       <p2 x="-620" y="4400"/>
     </wire>
     <wire>
-      <p1 x="-620" y="6740"/>
+      <p1 x="-620" y="5860"/>
+      <p2 x="-620" y="6200"/>
+    </wire>
+    <wire>
+      <p1 x="-620" y="6720"/>
       <p2 x="-620" y="6800"/>
     </wire>
     <wire>
       <p1 x="-620" y="6200"/>
-      <p2 x="-620" y="6660"/>
+      <p2 x="-620" y="6640"/>
     </wire>
     <wire>
       <p1 x="-620" y="-980"/>
@@ -13649,20 +13825,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-640" y="1800"/>
     </wire>
     <wire>
-      <p1 x="-640" y="6700"/>
-      <p2 x="-640" y="6740"/>
-    </wire>
-    <wire>
-      <p1 x="-640" y="6660"/>
-      <p2 x="-640" y="6680"/>
-    </wire>
-    <wire>
       <p1 x="-640" y="3300"/>
       <p2 x="-640" y="4380"/>
     </wire>
     <wire>
       <p1 x="-640" y="2980"/>
       <p2 x="-640" y="3260"/>
+    </wire>
+    <wire>
+      <p1 x="-640" y="6640"/>
+      <p2 x="-640" y="6680"/>
+    </wire>
+    <wire>
+      <p1 x="-640" y="6700"/>
+      <p2 x="-640" y="6720"/>
     </wire>
     <wire>
       <p1 x="640" y="2540"/>
@@ -14118,15 +14294,11 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="140" y="-1880"/>
-      <p2 x="140" y="-1640"/>
+      <p2 x="140" y="-1560"/>
     </wire>
     <wire>
       <p1 x="140" y="3700"/>
       <p2 x="140" y="3960"/>
-    </wire>
-    <wire>
-      <p1 x="140" y="-1640"/>
-      <p2 x="140" y="-1560"/>
     </wire>
     <wire>
       <p1 x="-1680" y="-1760"/>
@@ -14163,10 +14335,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1680" y="4360"/>
       <p2 x="1680" y="4460"/>
-    </wire>
-    <wire>
-      <p1 x="-660" y="5860"/>
-      <p2 x="-660" y="6220"/>
     </wire>
     <wire>
       <p1 x="-660" y="1180"/>
@@ -14217,12 +14385,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-660" y="4360"/>
     </wire>
     <wire>
+      <p1 x="-660" y="5860"/>
+      <p2 x="-660" y="6220"/>
+    </wire>
+    <wire>
       <p1 x="-660" y="-800"/>
       <p2 x="-660" y="320"/>
     </wire>
     <wire>
       <p1 x="-660" y="6220"/>
-      <p2 x="-660" y="6660"/>
+      <p2 x="-660" y="6640"/>
     </wire>
     <wire>
       <p1 x="660" y="2440"/>
@@ -14757,16 +14929,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-680" y="1520"/>
     </wire>
     <wire>
-      <p1 x="-680" y="6720"/>
-      <p2 x="-680" y="6740"/>
-    </wire>
-    <wire>
       <p1 x="-680" y="2980"/>
       <p2 x="-680" y="4340"/>
     </wire>
     <wire>
-      <p1 x="-680" y="6740"/>
-      <p2 x="-680" y="6800"/>
+      <p1 x="-680" y="6720"/>
+      <p2 x="-680" y="6740"/>
     </wire>
     <wire>
       <p1 x="680" y="5820"/>
@@ -15001,10 +15169,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1720" y="4060"/>
     </wire>
     <wire>
-      <p1 x="-700" y="5860"/>
-      <p2 x="-700" y="6240"/>
-    </wire>
-    <wire>
       <p1 x="-700" y="1720"/>
       <p2 x="-700" y="1760"/>
     </wire>
@@ -15029,12 +15193,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-700" y="6740"/>
     </wire>
     <wire>
-      <p1 x="-700" y="6660"/>
+      <p1 x="-700" y="2980"/>
+      <p2 x="-700" y="4320"/>
+    </wire>
+    <wire>
+      <p1 x="-700" y="6640"/>
       <p2 x="-700" y="6680"/>
     </wire>
     <wire>
-      <p1 x="-700" y="2980"/>
-      <p2 x="-700" y="4320"/>
+      <p1 x="-700" y="5860"/>
+      <p2 x="-700" y="6240"/>
     </wire>
     <wire>
       <p1 x="-700" y="-620"/>
@@ -15042,7 +15210,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-700" y="6240"/>
-      <p2 x="-700" y="6640"/>
+      <p2 x="-700" y="6620"/>
     </wire>
     <wire>
       <p1 x="700" y="4100"/>
@@ -15245,8 +15413,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-720" y="7040"/>
     </wire>
     <wire>
-      <p1 x="-720" y="2980"/>
+      <p1 x="-720" y="3620"/>
       <p2 x="-720" y="4300"/>
+    </wire>
+    <wire>
+      <p1 x="-720" y="2980"/>
+      <p2 x="-720" y="3600"/>
     </wire>
     <wire>
       <p1 x="-720" y="700"/>
@@ -15489,10 +15661,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1760" y="4100"/>
     </wire>
     <wire>
-      <p1 x="-740" y="6720"/>
-      <p2 x="-740" y="6740"/>
-    </wire>
-    <wire>
       <p1 x="-740" y="-1440"/>
       <p2 x="-740" y="-440"/>
     </wire>
@@ -15501,8 +15669,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-740" y="5940"/>
     </wire>
     <wire>
-      <p1 x="-740" y="2980"/>
+      <p1 x="-740" y="3700"/>
       <p2 x="-740" y="4280"/>
+    </wire>
+    <wire>
+      <p1 x="-740" y="2980"/>
+      <p2 x="-740" y="3680"/>
+    </wire>
+    <wire>
+      <p1 x="-740" y="6720"/>
+      <p2 x="-740" y="6740"/>
     </wire>
     <wire>
       <p1 x="-740" y="5940"/>
@@ -15513,16 +15689,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-740" y="280"/>
     </wire>
     <wire>
-      <p1 x="-740" y="6740"/>
-      <p2 x="-740" y="6800"/>
-    </wire>
-    <wire>
       <p1 x="-2280" y="920"/>
       <p2 x="-2280" y="5980"/>
     </wire>
     <wire>
       <p1 x="2280" y="2980"/>
       <p2 x="2280" y="6340"/>
+    </wire>
+    <wire>
+      <p1 x="-1260" y="3720"/>
+      <p2 x="-1260" y="3740"/>
     </wire>
     <wire>
       <p1 x="-1260" y="4320"/>
@@ -15535,6 +15711,14 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1260" y="600"/>
       <p2 x="-1260" y="880"/>
+    </wire>
+    <wire>
+      <p1 x="-1260" y="3640"/>
+      <p2 x="-1260" y="3660"/>
+    </wire>
+    <wire>
+      <p1 x="-1260" y="3800"/>
+      <p2 x="-1260" y="3820"/>
     </wire>
     <wire>
       <p1 x="-1260" y="7000"/>
@@ -15581,10 +15765,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1780" y="780"/>
     </wire>
     <wire>
-      <p1 x="-760" y="6640"/>
-      <p2 x="-760" y="6680"/>
-    </wire>
-    <wire>
       <p1 x="-760" y="1140"/>
       <p2 x="-760" y="1280"/>
     </wire>
@@ -15599,6 +15779,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-760" y="3520"/>
       <p2 x="-760" y="4260"/>
+    </wire>
+    <wire>
+      <p1 x="-760" y="6620"/>
+      <p2 x="-760" y="6680"/>
     </wire>
     <wire>
       <p1 x="-760" y="1280"/>
@@ -15905,8 +16089,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-780" y="7020"/>
     </wire>
     <wire>
-      <p1 x="-780" y="2980"/>
+      <p1 x="-780" y="3780"/>
       <p2 x="-780" y="4240"/>
+    </wire>
+    <wire>
+      <p1 x="-780" y="2980"/>
+      <p2 x="-780" y="3760"/>
     </wire>
     <wire>
       <p1 x="-780" y="5960"/>
@@ -16117,16 +16305,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1820" y="60"/>
     </wire>
     <wire>
-      <p1 x="-1820" y="2780"/>
-      <p2 x="-1820" y="6800"/>
-    </wire>
-    <wire>
       <p1 x="-1820" y="2560"/>
       <p2 x="-1820" y="2580"/>
     </wire>
     <wire>
       <p1 x="-1820" y="2440"/>
       <p2 x="-1820" y="2500"/>
+    </wire>
+    <wire>
+      <p1 x="-1820" y="2780"/>
+      <p2 x="-1820" y="6800"/>
     </wire>
     <wire>
       <p1 x="1820" y="3760"/>
@@ -16495,6 +16683,18 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1340" y="380"/>
       <p2 x="-1340" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3540"/>
+      <p2 x="-1340" y="3580"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3660"/>
+      <p2 x="-1340" y="3740"/>
+    </wire>
+    <wire>
+      <p1 x="-1340" y="3740"/>
+      <p2 x="-1340" y="3820"/>
     </wire>
     <wire>
       <p1 x="-1340" y="7080"/>
@@ -16961,15 +17161,15 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-880" y="160"/>
     </wire>
     <wire>
-      <p1 x="-880" y="6700"/>
-      <p2 x="-880" y="6720"/>
+      <p1 x="-880" y="6720"/>
+      <p2 x="-880" y="6740"/>
     </wire>
     <wire>
       <p1 x="-880" y="2980"/>
       <p2 x="-880" y="4140"/>
     </wire>
     <wire>
-      <p1 x="-880" y="6720"/>
+      <p1 x="-880" y="6740"/>
       <p2 x="-880" y="6760"/>
     </wire>
     <wire>
@@ -17037,6 +17237,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1400" y="3120"/>
     </wire>
     <wire>
+      <p1 x="-1400" y="3340"/>
+      <p2 x="-1400" y="3580"/>
+    </wire>
+    <wire>
       <p1 x="-1400" y="7140"/>
       <p2 x="-1400" y="7520"/>
     </wire>
@@ -17089,8 +17293,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-380" y="7160"/>
     </wire>
     <wire>
-      <p1 x="-380" y="1820"/>
+      <p1 x="-380" y="1840"/>
       <p2 x="-380" y="2020"/>
+    </wire>
+    <wire>
+      <p1 x="-380" y="1820"/>
+      <p2 x="-380" y="1840"/>
     </wire>
     <wire>
       <p1 x="-380" y="-2320"/>
@@ -17165,8 +17373,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-900" y="140"/>
     </wire>
     <wire>
-      <p1 x="-900" y="6680"/>
-      <p2 x="-900" y="6720"/>
+      <p1 x="-900" y="6700"/>
+      <p2 x="-900" y="6740"/>
     </wire>
     <wire>
       <p1 x="-900" y="2980"/>
@@ -17174,7 +17382,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-900" y="6020"/>
-      <p2 x="-900" y="6660"/>
+      <p2 x="-900" y="6680"/>
     </wire>
     <wire>
       <p1 x="900" y="2500"/>
@@ -17293,8 +17501,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-400" y="3340"/>
     </wire>
     <wire>
-      <p1 x="-400" y="1800"/>
+      <p1 x="-400" y="1820"/>
       <p2 x="-400" y="2000"/>
+    </wire>
+    <wire>
+      <p1 x="-400" y="1800"/>
+      <p2 x="-400" y="1820"/>
     </wire>
     <wire>
       <p1 x="-400" y="-2340"/>
@@ -17433,7 +17645,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-920" y="120"/>
     </wire>
     <wire>
-      <p1 x="-920" y="6700"/>
+      <p1 x="-920" y="6720"/>
       <p2 x="-920" y="6940"/>
     </wire>
     <wire>
@@ -18087,6 +18299,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-480" y="-2500"/>
       <p2 x="-480" y="-2400"/>
+    </wire>
+    <wire>
+      <p1 x="-480" y="6720"/>
+      <p2 x="-480" y="6800"/>
     </wire>
     <wire>
       <p1 x="480" y="6400"/>

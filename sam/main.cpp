@@ -155,8 +155,9 @@ for(string line : file){
         if(c != ':' && c != 'x') buf += c;
     }
     if(!contains_lead && is_hex){
+        trim(backup);
         buf = backup + buf;
-        is_hex = false;
+        if(backup != "0x") is_hex = false; // If the backup only contains the preceeding of a number, don't disable is_hex
     }
     trim(buf);
     if(buf == "") continue;
