@@ -69,10 +69,21 @@ MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
 #define BENO   (SQSH2 | SQSH1 | SQSH0)
 
 /// N.B. FEN is currently the only component that can be enabled while other components are enabled ( mostly because it's not connected to the bus )
+/// The flags register is connected to the ALU not to A or B, so when a FEN happens it's actually looking at the ouput of the ALU even though the ALU may be unrelated to
+/// that instruction: for ex. CHNGA will do a FEN
+
 
 /// A cycle always consists of 4 steps, at least for now
 /// STEP_1 and STEP_2 are handled in hardware
-/// They update the MAR and PC and load the instruction into the IR
+/// Right now they do the following control lines:
+/// STEP_1: MARLOAD | PCENO  | PCENDEF | PCINMOD | PCCLKMOD
+/// STEP_2: RAMENO  | IRLOAD | PCENDEF | PCINMOD | PCCLKMOD | PCLOAD
+/// Basically STEP1 prepares the PC for incrementing while copying the current value of the PC to MAR
+/// STEP_2 Takes the value from RAM at the location pointed to by MAR and loads it into IR, oh and also it finishes adding one to PC by enabling PCLOAD
+/// The control lines for STEP_3 and STEP_4 are then the output of the ROM which takes as address the first 4 bits of the IR, and a single bit indicating wheter this is STEP_3 or STEP_4, for a total of 5 address bits
+/// Except what the ROM says about STEP_3 and STEP_4 can be overriden for JMPZ and JMPC by combinatorial logic which takes as input the contents of the Flags Register, a.k.a the ZF and CF
+/// And for CHNG-type instructions, again the control lines for the register may be overriden by combinatorial logic which takes as input the last 4 bits of the bus
+
 #define STEP_3 0b00000
 #define STEP_4 0b10000
 
