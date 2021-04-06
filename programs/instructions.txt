@@ -1,0 +1,27 @@
+NOOP  0x0 # Immediate ignored
+TOA   0x1 # Immediate is address
+TOB   0x2 # Immediate is address
+SUM   0x3 # Immediate ignored
+SUB   0x4 # Immediate ignored
+FROMA 0x5 # Immediate is address
+FROMB 0x6 # Immediate is address
+JMP   0x7 # Immediate ignored
+CHNGA 0x8 # Immediate has special meaning
+CHNGB 0x9 # Immediate has special meaning
+AND   0xA # Immediate ignored
+
+
+CHNGA and CHNGB possible immediates:
+DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
+0     1   2    3     4      5        6      7
+
+
+
+JMPC  0xE # Immediate ignored
+JMPZ  0xF # Immediate ignored
+
+JMP, JMPC and JMPZ will jump to the address in the next address to them in ram
+
+Quick List of Instructions:
+NOOP, TOA, TOB, SUM, SUB, AND, FROMA, FROMB, JMP, CHNGA, CHNGB, JMPC, 
+JMPZ
