@@ -22,6 +22,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -55,6 +59,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -300,6 +308,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -323,6 +335,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -368,6 +384,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -381,6 +401,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -525,6 +549,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -723,7 +751,7 @@
         </entry>
         <entry>
           <string>Frequency</string>
-          <int>5</int>
+          <int>500</int>
         </entry>
       </elementAttributes>
       <pos x="-580" y="-2500"/>
@@ -812,6 +840,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -840,6 +872,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -874,6 +910,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1119,6 +1159,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1133,6 +1177,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1146,6 +1194,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1331,6 +1383,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1425,6 +1481,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>Label</string>
           <string>EN</string>
         </entry>
@@ -1434,6 +1494,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1449,6 +1513,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1462,6 +1530,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1477,6 +1549,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1490,6 +1566,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1505,6 +1585,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1519,6 +1603,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1532,6 +1620,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1561,6 +1653,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1595,6 +1691,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -1840,6 +1940,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1854,6 +1958,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -1867,6 +1975,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -2052,6 +2164,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -2080,6 +2196,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -2114,6 +2234,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -2359,6 +2483,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -2372,6 +2500,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -2557,6 +2689,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -2691,6 +2827,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -2704,6 +2844,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -2743,6 +2887,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -2756,6 +2904,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -3279,6 +3431,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -3655,6 +3811,10 @@ which can be bad for some components
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -4761,10 +4921,10 @@ ACNTRLLINEMOD is on</string>
       <elementAttributes>
         <entry>
           <string>rotation</string>
-          <rotation rotation="2"/>
+          <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1960" y="80"/>
+      <pos x="2040" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>Decoder</elementName>
@@ -4903,7 +5063,7 @@ ACNTRLLINEMOD is on</string>
           <int>4</int>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="560"/>
+      <pos x="1540" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -4917,7 +5077,7 @@ ACNTRLLINEMOD is on</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="1840" y="540"/>
+      <pos x="1840" y="620"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -5061,7 +5221,7 @@ ACNTRLLINEMOD is on</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="4360"/>
+      <pos x="1520" y="4380"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -5079,7 +5239,7 @@ ACNTRLLINEMOD is on</string>
           <int>5</int>
         </entry>
       </elementAttributes>
-      <pos x="1600" y="4360"/>
+      <pos x="1600" y="4380"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -5154,7 +5314,7 @@ ACNTRLLINEMOD is on</string>
           <int>4</int>
         </entry>
       </elementAttributes>
-      <pos x="1400" y="4280"/>
+      <pos x="1400" y="4340"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -5168,7 +5328,7 @@ ACNTRLLINEMOD is on</string>
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="1700" y="4260"/>
+      <pos x="1700" y="4360"/>
     </visualElement>
     <visualElement>
       <elementName>Or</elementName>
@@ -5199,10 +5359,10 @@ ACNTRLLINEMOD is on</string>
       <elementAttributes>
         <entry>
           <string>rotation</string>
-          <rotation rotation="2"/>
+          <rotation rotation="1"/>
         </entry>
       </elementAttributes>
-      <pos x="1820" y="3560"/>
+      <pos x="1880" y="3560"/>
     </visualElement>
     <visualElement>
       <elementName>PullDown</elementName>
@@ -5218,6 +5378,10 @@ ACNTRLLINEMOD is on</string>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -5231,6 +5395,10 @@ ACNTRLLINEMOD is on</string>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
@@ -5412,6 +5580,10 @@ ACNTRLLINEMOD is on</string>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>addValueToGraph</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
@@ -5529,6 +5701,306 @@ ACNTRLLINEMOD is on</string>
         </entry>
       </elementAttributes>
       <pos x="-520" y="6720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="2040" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="2040" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="2000" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1960" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1420" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1580" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1660" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1740" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1820" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1900" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1900" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1940" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1940" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1880" y="3520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1880" y="3480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1840" y="3480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1800" y="3480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1280" y="4220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="4220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1520" y="4220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1600" y="4220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1680" y="4220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1760" y="4240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1760" y="4200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1760" y="4160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1760" y="4120"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -5793,10 +6265,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="740" y="5140"/>
     </wire>
     <wire>
-      <p1 x="1300" y="4120"/>
-      <p2 x="1320" y="4120"/>
-    </wire>
-    <wire>
       <p1 x="600" y="4120"/>
       <p2 x="680" y="4120"/>
     </wire>
@@ -5815,6 +6283,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1460" y="4120"/>
       <p2 x="-900" y="4120"/>
+    </wire>
+    <wire>
+      <p1 x="1760" y="4120"/>
+      <p2 x="2320" y="4120"/>
     </wire>
     <wire>
       <p1 x="60" y="3100"/>
@@ -6157,7 +6629,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-960" y="80"/>
     </wire>
     <wire>
-      <p1 x="1960" y="80"/>
+      <p1 x="2040" y="80"/>
       <p2 x="2340" y="80"/>
     </wire>
     <wire>
@@ -6174,7 +6646,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="1880" y="80"/>
-      <p2 x="1920" y="80"/>
+      <p2 x="1960" y="80"/>
     </wire>
     <wire>
       <p1 x="1640" y="80"/>
@@ -6219,10 +6691,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1400" y="4180"/>
       <p2 x="-840" y="4180"/>
-    </wire>
-    <wire>
-      <p1 x="1700" y="4180"/>
-      <p2 x="1720" y="4180"/>
     </wire>
     <wire>
       <p1 x="540" y="3160"/>
@@ -6347,10 +6815,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1380" y="4200"/>
       <p2 x="-820" y="4200"/>
-    </wire>
-    <wire>
-      <p1 x="1440" y="4200"/>
-      <p2 x="1460" y="4200"/>
     </wire>
     <wire>
       <p1 x="500" y="3180"/>
@@ -6593,12 +7057,32 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-780" y="4240"/>
     </wire>
     <wire>
+      <p1 x="1280" y="4240"/>
+      <p2 x="1480" y="4240"/>
+    </wire>
+    <wire>
       <p1 x="600" y="4240"/>
       <p2 x="640" y="4240"/>
     </wire>
     <wire>
+      <p1 x="1600" y="4240"/>
+      <p2 x="1680" y="4240"/>
+    </wire>
+    <wire>
+      <p1 x="1480" y="4240"/>
+      <p2 x="1520" y="4240"/>
+    </wire>
+    <wire>
       <p1 x="700" y="4240"/>
       <p2 x="740" y="4240"/>
+    </wire>
+    <wire>
+      <p1 x="1520" y="4240"/>
+      <p2 x="1600" y="4240"/>
+    </wire>
+    <wire>
+      <p1 x="1680" y="4240"/>
+      <p2 x="1740" y="4240"/>
     </wire>
     <wire>
       <p1 x="640" y="4240"/>
@@ -6723,10 +7207,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1320" y="4260"/>
       <p2 x="-760" y="4260"/>
-    </wire>
-    <wire>
-      <p1 x="1620" y="4260"/>
-      <p2 x="1640" y="4260"/>
     </wire>
     <wire>
       <p1 x="-300" y="3240"/>
@@ -6867,6 +7347,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1300" y="4280"/>
       <p2 x="-740" y="4280"/>
+    </wire>
+    <wire>
+      <p1 x="1740" y="4280"/>
+      <p2 x="1760" y="4280"/>
     </wire>
     <wire>
       <p1 x="-1340" y="3260"/>
@@ -7033,6 +7517,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="740" y="5320"/>
     </wire>
     <wire>
+      <p1 x="1540" y="4300"/>
+      <p2 x="1560" y="4300"/>
+    </wire>
+    <wire>
       <p1 x="620" y="4300"/>
       <p2 x="640" y="4300"/>
     </wire>
@@ -7047,10 +7535,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1280" y="4300"/>
       <p2 x="-720" y="4300"/>
-    </wire>
-    <wire>
-      <p1 x="1440" y="4300"/>
-      <p2 x="1460" y="4300"/>
     </wire>
     <wire>
       <p1 x="-340" y="3280"/>
@@ -7253,10 +7737,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-680" y="4340"/>
     </wire>
     <wire>
-      <p1 x="1380" y="4340"/>
-      <p2 x="1420" y="4340"/>
-    </wire>
-    <wire>
       <p1 x="-1880" y="3320"/>
       <p2 x="-1620" y="3320"/>
     </wire>
@@ -7417,6 +7897,14 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1380" y="5380"/>
     </wire>
     <wire>
+      <p1 x="1440" y="4360"/>
+      <p2 x="1460" y="4360"/>
+    </wire>
+    <wire>
+      <p1 x="1380" y="4360"/>
+      <p2 x="1420" y="4360"/>
+    </wire>
+    <wire>
       <p1 x="160" y="4360"/>
       <p2 x="640" y="4360"/>
     </wire>
@@ -7425,16 +7913,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-660" y="4360"/>
     </wire>
     <wire>
-      <p1 x="1420" y="4360"/>
-      <p2 x="1520" y="4360"/>
-    </wire>
-    <wire>
       <p1 x="1260" y="4360"/>
       <p2 x="1280" y="4360"/>
-    </wire>
-    <wire>
-      <p1 x="1540" y="4360"/>
-      <p2 x="1560" y="4360"/>
     </wire>
     <wire>
       <p1 x="-400" y="3340"/>
@@ -7565,6 +8045,14 @@ ACNTRLLINEMOD is on</string>
       <p2 x="500" y="5400"/>
     </wire>
     <wire>
+      <p1 x="1420" y="4380"/>
+      <p2 x="1520" y="4380"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="4380"/>
+      <p2 x="1560" y="4380"/>
+    </wire>
+    <wire>
       <p1 x="420" y="4380"/>
       <p2 x="660" y="4380"/>
     </wire>
@@ -7575,10 +8063,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1200" y="4380"/>
       <p2 x="-640" y="4380"/>
-    </wire>
-    <wire>
-      <p1 x="1460" y="4380"/>
-      <p2 x="1600" y="4380"/>
     </wire>
     <wire>
       <p1 x="-1640" y="3360"/>
@@ -7713,6 +8197,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="280" y="5420"/>
     </wire>
     <wire>
+      <p1 x="1460" y="4400"/>
+      <p2 x="1600" y="4400"/>
+    </wire>
+    <wire>
       <p1 x="-60" y="4400"/>
       <p2 x="60" y="4400"/>
     </wire>
@@ -7727,10 +8215,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1180" y="4400"/>
       <p2 x="-620" y="4400"/>
-    </wire>
-    <wire>
-      <p1 x="1560" y="4400"/>
-      <p2 x="1620" y="4400"/>
     </wire>
     <wire>
       <p1 x="280" y="4400"/>
@@ -7837,6 +8321,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-660" y="320"/>
     </wire>
     <wire>
+      <p1 x="1560" y="4420"/>
+      <p2 x="1620" y="4420"/>
+    </wire>
+    <wire>
       <p1 x="780" y="4420"/>
       <p2 x="900" y="4420"/>
     </wire>
@@ -7859,10 +8347,6 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="-1160" y="4420"/>
       <p2 x="-600" y="4420"/>
-    </wire>
-    <wire>
-      <p1 x="1580" y="4420"/>
-      <p2 x="1660" y="4420"/>
     </wire>
     <wire>
       <p1 x="600" y="4420"/>
@@ -7955,6 +8439,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="40" y="5460"/>
       <p2 x="800" y="5460"/>
+    </wire>
+    <wire>
+      <p1 x="1580" y="4440"/>
+      <p2 x="1660" y="4440"/>
     </wire>
     <wire>
       <p1 x="600" y="4440"/>
@@ -8621,10 +9109,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="260" y="460"/>
     </wire>
     <wire>
-      <p1 x="1840" y="460"/>
-      <p2 x="1860" y="460"/>
-    </wire>
-    <wire>
       <p1 x="-540" y="460"/>
       <p2 x="-400" y="460"/>
     </wire>
@@ -8777,12 +9261,32 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-560" y="480"/>
     </wire>
     <wire>
-      <p1 x="1580" y="480"/>
-      <p2 x="1600" y="480"/>
+      <p1 x="1940" y="480"/>
+      <p2 x="2340" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1420" y="480"/>
+      <p2 x="1620" y="480"/>
     </wire>
     <wire>
       <p1 x="-560" y="480"/>
       <p2 x="-380" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1740" y="480"/>
+      <p2 x="1820" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1620" y="480"/>
+      <p2 x="1660" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="480"/>
+      <p2 x="1740" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1820" y="480"/>
+      <p2 x="1900" y="480"/>
     </wire>
     <wire>
       <p1 x="-260" y="5600"/>
@@ -8829,7 +9333,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1280" y="3560"/>
     </wire>
     <wire>
-      <p1 x="1820" y="3560"/>
+      <p1 x="1880" y="3560"/>
       <p2 x="2320" y="3560"/>
     </wire>
     <wire>
@@ -8838,7 +9342,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="1740" y="3560"/>
-      <p2 x="1780" y="3560"/>
+      <p2 x="1800" y="3560"/>
     </wire>
     <wire>
       <p1 x="1500" y="3560"/>
@@ -9193,12 +9697,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-620" y="540"/>
     </wire>
     <wire>
-      <p1 x="1440" y="540"/>
-      <p2 x="1460" y="540"/>
-    </wire>
-    <wire>
-      <p1 x="1760" y="540"/>
-      <p2 x="1780" y="540"/>
+      <p1 x="1680" y="540"/>
+      <p2 x="1700" y="540"/>
     </wire>
     <wire>
       <p1 x="-620" y="540"/>
@@ -9481,10 +9981,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1300" y="580"/>
     </wire>
     <wire>
-      <p1 x="1580" y="580"/>
-      <p2 x="1600" y="580"/>
-    </wire>
-    <wire>
       <p1 x="-660" y="580"/>
       <p2 x="-280" y="580"/>
     </wire>
@@ -9621,6 +10117,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1180" y="-600"/>
     </wire>
     <wire>
+      <p1 x="1580" y="600"/>
+      <p2 x="1600" y="600"/>
+    </wire>
+    <wire>
       <p1 x="-1040" y="600"/>
       <p2 x="-680" y="600"/>
     </wire>
@@ -9678,10 +10178,6 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-440" y="-1640"/>
-      <p2 x="140" y="-1640"/>
-    </wire>
-    <wire>
-      <p1 x="140" y="-1640"/>
       <p2 x="440" y="-1640"/>
     </wire>
     <wire>
@@ -10938,6 +11434,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-620" y="1820"/>
+      <p2 x="-400" y="1820"/>
+    </wire>
+    <wire>
+      <p1 x="-400" y="1820"/>
       <p2 x="-380" y="1820"/>
     </wire>
     <wire>
@@ -11066,6 +11566,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="-600" y="1840"/>
+      <p2 x="-380" y="1840"/>
+    </wire>
+    <wire>
+      <p1 x="-380" y="1840"/>
       <p2 x="-360" y="1840"/>
     </wire>
     <wire>
@@ -12301,20 +12805,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1540" y="340"/>
     </wire>
     <wire>
-      <p1 x="1540" y="560"/>
+      <p1 x="1540" y="580"/>
       <p2 x="1540" y="1180"/>
     </wire>
     <wire>
-      <p1 x="1540" y="4360"/>
+      <p1 x="1540" y="4380"/>
       <p2 x="1540" y="4680"/>
-    </wire>
-    <wire>
-      <p1 x="1540" y="4100"/>
-      <p2 x="1540" y="4280"/>
     </wire>
     <wire>
       <p1 x="1540" y="5000"/>
       <p2 x="1540" y="5300"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="4100"/>
+      <p2 x="1540" y="4140"/>
     </wire>
     <wire>
       <p1 x="1540" y="1180"/>
@@ -12501,7 +13005,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1560" y="1180"/>
     </wire>
     <wire>
-      <p1 x="1560" y="560"/>
+      <p1 x="1560" y="580"/>
       <p2 x="1560" y="620"/>
     </wire>
     <wire>
@@ -12513,8 +13017,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1560" y="5000"/>
     </wire>
     <wire>
-      <p1 x="1560" y="4400"/>
+      <p1 x="1560" y="4420"/>
       <p2 x="1560" y="4740"/>
+    </wire>
+    <wire>
+      <p1 x="1560" y="4220"/>
+      <p2 x="1560" y="4300"/>
     </wire>
     <wire>
       <p1 x="-540" y="-1440"/>
@@ -12669,7 +13177,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1580" y="380"/>
     </wire>
     <wire>
-      <p1 x="1580" y="580"/>
+      <p1 x="1580" y="600"/>
       <p2 x="1580" y="840"/>
     </wire>
     <wire>
@@ -12677,8 +13185,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1580" y="4080"/>
     </wire>
     <wire>
-      <p1 x="1580" y="4420"/>
+      <p1 x="1580" y="4440"/>
       <p2 x="1580" y="4720"/>
+    </wire>
+    <wire>
+      <p1 x="1580" y="460"/>
+      <p2 x="1580" y="500"/>
     </wire>
     <wire>
       <p1 x="-560" y="480"/>
@@ -12869,12 +13381,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1600" y="1280"/>
     </wire>
     <wire>
-      <p1 x="1600" y="380"/>
-      <p2 x="1600" y="480"/>
-    </wire>
-    <wire>
-      <p1 x="1600" y="560"/>
-      <p2 x="1600" y="580"/>
+      <p1 x="1600" y="580"/>
+      <p2 x="1600" y="600"/>
     </wire>
     <wire>
       <p1 x="1600" y="4520"/>
@@ -12885,8 +13393,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1600" y="4100"/>
     </wire>
     <wire>
-      <p1 x="1600" y="4360"/>
-      <p2 x="1600" y="4380"/>
+      <p1 x="1600" y="4380"/>
+      <p2 x="1600" y="4400"/>
+    </wire>
+    <wire>
+      <p1 x="1600" y="4220"/>
+      <p2 x="1600" y="4240"/>
     </wire>
     <wire>
       <p1 x="-580" y="2820"/>
@@ -13145,20 +13657,24 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1620" y="1600"/>
     </wire>
     <wire>
-      <p1 x="1620" y="560"/>
+      <p1 x="1620" y="580"/>
       <p2 x="1620" y="780"/>
     </wire>
     <wire>
-      <p1 x="1620" y="4100"/>
-      <p2 x="1620" y="4260"/>
-    </wire>
-    <wire>
-      <p1 x="1620" y="4360"/>
-      <p2 x="1620" y="4400"/>
+      <p1 x="1620" y="4380"/>
+      <p2 x="1620" y="4420"/>
     </wire>
     <wire>
       <p1 x="1620" y="4600"/>
       <p2 x="1620" y="5280"/>
+    </wire>
+    <wire>
+      <p1 x="1620" y="460"/>
+      <p2 x="1620" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1620" y="4100"/>
+      <p2 x="1620" y="4140"/>
     </wire>
     <wire>
       <p1 x="-600" y="520"/>
@@ -13417,12 +13933,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1640" y="4060"/>
     </wire>
     <wire>
-      <p1 x="1640" y="4260"/>
-      <p2 x="1640" y="4280"/>
+      <p1 x="1640" y="4380"/>
+      <p2 x="1640" y="4500"/>
     </wire>
     <wire>
-      <p1 x="1640" y="4360"/>
-      <p2 x="1640" y="4500"/>
+      <p1 x="1640" y="4220"/>
+      <p2 x="1640" y="4300"/>
     </wire>
     <wire>
       <p1 x="1640" y="3000"/>
@@ -13773,8 +14289,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1660" y="1280"/>
     </wire>
     <wire>
-      <p1 x="1660" y="4360"/>
-      <p2 x="1660" y="4420"/>
+      <p1 x="1660" y="4380"/>
+      <p2 x="1660" y="4440"/>
     </wire>
     <wire>
       <p1 x="1660" y="3560"/>
@@ -13783,6 +14299,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1660" y="4580"/>
       <p2 x="1660" y="5000"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="460"/>
+      <p2 x="1660" y="480"/>
     </wire>
     <wire>
       <p1 x="-640" y="560"/>
@@ -14181,12 +14701,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-140" y="4140"/>
     </wire>
     <wire>
-      <p1 x="-140" y="-1740"/>
-      <p2 x="-140" y="-1380"/>
-    </wire>
-    <wire>
       <p1 x="-140" y="180"/>
       <p2 x="-140" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="-1740"/>
+      <p2 x="-140" y="-1380"/>
     </wire>
     <wire>
       <p1 x="-140" y="4260"/>
@@ -14294,11 +14814,15 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="140" y="-1880"/>
-      <p2 x="140" y="-1560"/>
+      <p2 x="140" y="-1640"/>
     </wire>
     <wire>
       <p1 x="140" y="3700"/>
       <p2 x="140" y="3960"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="-1640"/>
+      <p2 x="140" y="-1560"/>
     </wire>
     <wire>
       <p1 x="-1680" y="-1760"/>
@@ -14317,10 +14841,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1680" y="960"/>
     </wire>
     <wire>
-      <p1 x="1680" y="380"/>
-      <p2 x="1680" y="560"/>
-    </wire>
-    <wire>
       <p1 x="1680" y="1280"/>
       <p2 x="1680" y="1580"/>
     </wire>
@@ -14333,8 +14853,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1680" y="5240"/>
     </wire>
     <wire>
-      <p1 x="1680" y="4360"/>
+      <p1 x="1680" y="4380"/>
       <p2 x="1680" y="4460"/>
+    </wire>
+    <wire>
+      <p1 x="1680" y="540"/>
+      <p2 x="1680" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="1680" y="4220"/>
+      <p2 x="1680" y="4240"/>
     </wire>
     <wire>
       <p1 x="-660" y="1180"/>
@@ -14625,12 +15153,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-160" y="4180"/>
     </wire>
     <wire>
-      <p1 x="-160" y="-1900"/>
-      <p2 x="-160" y="-1340"/>
-    </wire>
-    <wire>
       <p1 x="-160" y="200"/>
       <p2 x="-160" y="720"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="-1900"/>
+      <p2 x="-160" y="-1340"/>
     </wire>
     <wire>
       <p1 x="-160" y="840"/>
@@ -14881,7 +15409,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1700" y="1020"/>
     </wire>
     <wire>
-      <p1 x="1700" y="4260"/>
+      <p1 x="1700" y="4360"/>
       <p2 x="1700" y="4520"/>
     </wire>
     <wire>
@@ -14889,8 +15417,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1700" y="5000"/>
     </wire>
     <wire>
+      <p1 x="1700" y="460"/>
+      <p2 x="1700" y="540"/>
+    </wire>
+    <wire>
       <p1 x="1700" y="4100"/>
-      <p2 x="1700" y="4180"/>
+      <p2 x="1700" y="4140"/>
     </wire>
     <wire>
       <p1 x="-680" y="1160"/>
@@ -15169,6 +15701,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1720" y="4060"/>
     </wire>
     <wire>
+      <p1 x="1720" y="4220"/>
+      <p2 x="1720" y="4280"/>
+    </wire>
+    <wire>
       <p1 x="-700" y="1720"/>
       <p2 x="-700" y="1760"/>
     </wire>
@@ -15373,7 +15909,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1740" y="2580"/>
     </wire>
     <wire>
-      <p1 x="1740" y="4260"/>
+      <p1 x="1740" y="4360"/>
       <p2 x="1740" y="4460"/>
     </wire>
     <wire>
@@ -15399,6 +15935,14 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1740" y="3560"/>
       <p2 x="1740" y="4080"/>
+    </wire>
+    <wire>
+      <p1 x="1740" y="460"/>
+      <p2 x="1740" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1740" y="4240"/>
+      <p2 x="1740" y="4280"/>
     </wire>
     <wire>
       <p1 x="1740" y="4460"/>
@@ -15645,10 +16189,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-1760" y="6760"/>
     </wire>
     <wire>
-      <p1 x="1760" y="380"/>
-      <p2 x="1760" y="540"/>
-    </wire>
-    <wire>
       <p1 x="1760" y="640"/>
       <p2 x="1760" y="680"/>
     </wire>
@@ -15757,12 +16297,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1780" y="340"/>
     </wire>
     <wire>
-      <p1 x="1780" y="540"/>
-      <p2 x="1780" y="560"/>
-    </wire>
-    <wire>
       <p1 x="1780" y="640"/>
       <p2 x="1780" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="1780" y="460"/>
+      <p2 x="1780" y="560"/>
     </wire>
     <wire>
       <p1 x="-760" y="1140"/>
@@ -15875,6 +16415,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1280" y="4680"/>
       <p2 x="1280" y="4720"/>
+    </wire>
+    <wire>
+      <p1 x="1280" y="4220"/>
+      <p2 x="1280" y="4240"/>
     </wire>
     <wire>
       <p1 x="1280" y="2560"/>
@@ -16073,6 +16617,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1800" y="1280"/>
     </wire>
     <wire>
+      <p1 x="1800" y="3520"/>
+      <p2 x="1800" y="3560"/>
+    </wire>
+    <wire>
       <p1 x="-780" y="5800"/>
       <p2 x="-780" y="5960"/>
     </wire>
@@ -16110,6 +16658,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="2320" y="3560"/>
+      <p2 x="2320" y="4120"/>
+    </wire>
+    <wire>
+      <p1 x="2320" y="4120"/>
       <p2 x="2320" y="6380"/>
     </wire>
     <wire>
@@ -16150,7 +16702,7 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="1300" y="4100"/>
-      <p2 x="1300" y="4120"/>
+      <p2 x="1300" y="4140"/>
     </wire>
     <wire>
       <p1 x="-280" y="-2500"/>
@@ -16333,6 +16885,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1820" y="740"/>
     </wire>
     <wire>
+      <p1 x="1820" y="460"/>
+      <p2 x="1820" y="480"/>
+    </wire>
+    <wire>
       <p1 x="-800" y="760"/>
       <p2 x="-800" y="780"/>
     </wire>
@@ -16382,6 +16938,10 @@ ACNTRLLINEMOD is on</string>
     </wire>
     <wire>
       <p1 x="2340" y="80"/>
+      <p2 x="2340" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="2340" y="480"/>
       <p2 x="2340" y="6400"/>
     </wire>
     <wire>
@@ -16497,7 +17057,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1320" y="4940"/>
     </wire>
     <wire>
-      <p1 x="1320" y="4120"/>
+      <p1 x="1320" y="4220"/>
       <p2 x="1320" y="4280"/>
     </wire>
     <wire>
@@ -16577,16 +17137,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1840" y="2900"/>
     </wire>
     <wire>
-      <p1 x="1840" y="540"/>
+      <p1 x="1840" y="620"/>
       <p2 x="1840" y="800"/>
     </wire>
     <wire>
       <p1 x="1840" y="840"/>
       <p2 x="1840" y="1280"/>
-    </wire>
-    <wire>
-      <p1 x="1840" y="380"/>
-      <p2 x="1840" y="460"/>
     </wire>
     <wire>
       <p1 x="-820" y="5860"/>
@@ -16789,6 +17345,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1860" y="340"/>
     </wire>
     <wire>
+      <p1 x="1860" y="460"/>
+      <p2 x="1860" y="540"/>
+    </wire>
+    <wire>
       <p1 x="-840" y="680"/>
       <p2 x="-840" y="740"/>
     </wire>
@@ -16961,7 +17521,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1880" y="1500"/>
     </wire>
     <wire>
-      <p1 x="1880" y="540"/>
+      <p1 x="1880" y="620"/>
       <p2 x="1880" y="740"/>
     </wire>
     <wire>
@@ -17065,7 +17625,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1380" y="4900"/>
     </wire>
     <wire>
-      <p1 x="1380" y="4340"/>
+      <p1 x="1380" y="4360"/>
       <p2 x="1380" y="4460"/>
     </wire>
     <wire>
@@ -17261,7 +17821,7 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1400" y="4060"/>
     </wire>
     <wire>
-      <p1 x="1400" y="4280"/>
+      <p1 x="1400" y="4340"/>
       <p2 x="1400" y="4900"/>
     </wire>
     <wire>
@@ -17293,12 +17853,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-380" y="7160"/>
     </wire>
     <wire>
-      <p1 x="-380" y="1840"/>
-      <p2 x="-380" y="2020"/>
-    </wire>
-    <wire>
       <p1 x="-380" y="1820"/>
-      <p2 x="-380" y="1840"/>
+      <p2 x="-380" y="2020"/>
     </wire>
     <wire>
       <p1 x="-380" y="-2320"/>
@@ -17469,12 +18025,16 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1420" y="4080"/>
     </wire>
     <wire>
-      <p1 x="1420" y="4360"/>
+      <p1 x="1420" y="4380"/>
       <p2 x="1420" y="4900"/>
     </wire>
     <wire>
-      <p1 x="1420" y="4280"/>
-      <p2 x="1420" y="4340"/>
+      <p1 x="1420" y="4340"/>
+      <p2 x="1420" y="4360"/>
+    </wire>
+    <wire>
+      <p1 x="1420" y="460"/>
+      <p2 x="1420" y="480"/>
     </wire>
     <wire>
       <p1 x="-400" y="-2500"/>
@@ -17501,12 +18061,8 @@ ACNTRLLINEMOD is on</string>
       <p2 x="-400" y="3340"/>
     </wire>
     <wire>
-      <p1 x="-400" y="1820"/>
-      <p2 x="-400" y="2000"/>
-    </wire>
-    <wire>
       <p1 x="-400" y="1800"/>
-      <p2 x="-400" y="1820"/>
+      <p2 x="-400" y="2000"/>
     </wire>
     <wire>
       <p1 x="-400" y="-2340"/>
@@ -17633,6 +18189,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1940" y="6000"/>
     </wire>
     <wire>
+      <p1 x="1940" y="440"/>
+      <p2 x="1940" y="480"/>
+    </wire>
+    <wire>
       <p1 x="-920" y="1140"/>
       <p2 x="-920" y="1600"/>
     </wire>
@@ -17705,10 +18265,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1440" y="3120"/>
     </wire>
     <wire>
-      <p1 x="1440" y="380"/>
-      <p2 x="1440" y="540"/>
-    </wire>
-    <wire>
       <p1 x="1440" y="1080"/>
       <p2 x="1440" y="1120"/>
     </wire>
@@ -17721,8 +18277,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1440" y="4100"/>
     </wire>
     <wire>
-      <p1 x="1440" y="4300"/>
+      <p1 x="1440" y="4360"/>
       <p2 x="1440" y="4560"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="4220"/>
+      <p2 x="1440" y="4260"/>
     </wire>
     <wire>
       <p1 x="-420" y="5800"/>
@@ -17865,6 +18425,10 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1960" y="6020"/>
     </wire>
     <wire>
+      <p1 x="1960" y="40"/>
+      <p2 x="1960" y="80"/>
+    </wire>
+    <wire>
       <p1 x="-940" y="5860"/>
       <p2 x="-940" y="6040"/>
     </wire>
@@ -17929,10 +18493,6 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1460" y="340"/>
     </wire>
     <wire>
-      <p1 x="1460" y="540"/>
-      <p2 x="1460" y="560"/>
-    </wire>
-    <wire>
       <p1 x="1460" y="640"/>
       <p2 x="1460" y="740"/>
     </wire>
@@ -17941,16 +18501,20 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1460" y="1220"/>
     </wire>
     <wire>
-      <p1 x="1460" y="4380"/>
+      <p1 x="1460" y="4400"/>
       <p2 x="1460" y="5000"/>
     </wire>
     <wire>
-      <p1 x="1460" y="4100"/>
-      <p2 x="1460" y="4200"/>
+      <p1 x="1460" y="4340"/>
+      <p2 x="1460" y="4360"/>
     </wire>
     <wire>
-      <p1 x="1460" y="4280"/>
-      <p2 x="1460" y="4300"/>
+      <p1 x="1460" y="460"/>
+      <p2 x="1460" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="4100"/>
+      <p2 x="1460" y="4140"/>
     </wire>
     <wire>
       <p1 x="-440" y="-2500"/>
@@ -18201,8 +18765,12 @@ ACNTRLLINEMOD is on</string>
       <p2 x="1480" y="5320"/>
     </wire>
     <wire>
-      <p1 x="1480" y="4280"/>
+      <p1 x="1480" y="4340"/>
       <p2 x="1480" y="4500"/>
+    </wire>
+    <wire>
+      <p1 x="1480" y="4220"/>
+      <p2 x="1480" y="4240"/>
     </wire>
     <wire>
       <p1 x="-460" y="5800"/>
@@ -18503,6 +19071,10 @@ ACNTRLLINEMOD is on</string>
     <wire>
       <p1 x="1520" y="1660"/>
       <p2 x="1520" y="1680"/>
+    </wire>
+    <wire>
+      <p1 x="1520" y="4220"/>
+      <p2 x="1520" y="4240"/>
     </wire>
     <wire>
       <p1 x="-500" y="1200"/>
