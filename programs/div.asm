@@ -18,7 +18,8 @@ LOOP:
 	TOB {cache_b}
 	SUB
 JMPC
-{LOOP}
+{LOOP} ; Carry should be on after SUB, except when overflowing signed arithmetic, also SUB leaves B inverted, but that dosen't matter for us
+; CHNGB is done before SUB because it updates flags too
 
 END:
 	TOA {res}
