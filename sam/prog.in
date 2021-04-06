@@ -1,0 +1,42 @@
+;;;;;;;;;;;;;;;;;;;;;; HEADER
+; NOTE: There cannot be more than 16 statements in the header
+JMP
+{OUTSIDE} ; ESCAPE HEADER
+;-----------------
+cache_a: 0xA
+cache_b: 0x1
+back:   0x0
+site1_addr: {site1}
+;;;;;;;;;;;;;;;;;;;;;;;
+
+ROTLA:
+	FROMB {cache_b}
+
+	FROMA {cache_a}
+	TOB   {cache_a}
+	SUM
+
+	TOB {cache_b}
+	JMP 
+	{back}
+
+OUTSIDE:
+	TOA {cache_a}
+	TOB {cache_b}
+	
+
+	FROMB {cache_b}
+	TOB   {site1_addr}
+	FROMB {back}
+	TOB   {cache_b}
+	JMP
+	{ROTLA}		
+site1:
+	SUM
+
+
+HLT: JMP
+     {HLT}
+
+
+

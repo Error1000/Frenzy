@@ -70,14 +70,19 @@ inline void insert_data(int data){
     out << "0x" << hex << +data << '\n';
     curr_addr++;
 }
+/// NOTE: This is facky AF
+/// For example i don't think you can't have the letter 'x' in labels or instruction mnemonics because we use it to identify numbers, also all numbers must be written in hex
+/// You also can't use '[',  ']',  '{',  '}' in names, because they get 'ignored'
 int main(){
 map<string, int> lblmap;
 map<string, int> defmap;
 
 vector<string> file;
 string line;
+int lineno = 0;
 
 while(getline(in, line ,'\n')){
+    lineno++;
     file.push_back(line);
 
     string buf;
@@ -115,7 +120,10 @@ while(getline(in, line ,'\n')){
     }
 
     if(is_def){
-            if(dv == -1) panic("Define without value!");
+            if(dv == -1){
+                cerr << "Define on line: " << lineno << ", without number!" << endl;
+                panic("");
+            }
             trim(buf);
             defmap[buf] = dv;
             continue;
@@ -126,8 +134,9 @@ while(getline(in, line ,'\n')){
 }
 
 curr_addr = 0;
-
+lineno = 0;
 for(string line : file){
+    lineno++;
     string buf;
     string backup;
     /// Parse numbers and addrs
@@ -184,8 +193,12 @@ for(string line : file){
             if(c == '{') is_lbl_val = true;
             if(c == 'x'){ is_hex_val = true; part = ""; }
             if(c == ' '){
+                if(is_ins) continue;
                 auto vall = inst_mnemonics.find(part);
-                if(vall == inst_mnemonics.end()) panic("Mnemonic not found!");
+                if(vall == inst_mnemonics.end()){
+                    cerr << "Mnemonic: \"" << part << "\", on line: " << lineno << ", not found!" << endl;
+                    panic("");
+                }
                 ins = (*vall).second;
                 part = "";
                 is_ins = true;
@@ -196,14 +209,20 @@ for(string line : file){
 
         if(!is_ins && is_lbl_val){
             auto vall = lblmap.find(part);
-            if(vall == lblmap.end()) panic("Could not find label!");
+            if(vall == lblmap.end()){
+                    cerr << "Could not find label: \"" << part << "\", on line: " << lineno << "!";
+                    panic("");
+            }
             insert_data((*vall).second);
             continue;
         }
 
-        if(!is_ins && part != ""){
+        if(!is_ins && part != ""){ // Naked instructions with no arguments
             auto vall = inst_mnemonics.find(part);
-            if(vall == inst_mnemonics.end()) panic("Mnemonic not found!");
+            if(vall == inst_mnemonics.end()){
+                cerr << "Mnemonic: \"" << part << "\", on line: " << lineno << ", not found!" << endl;
+                panic("");
+            }
             ins = (*vall).second;
             part = "";
             is_ins = true;
@@ -214,7 +233,10 @@ for(string line : file){
         }
         if(is_ins && is_def_val){
             auto vall = defmap.find(part);
-            if(vall == defmap.end()) panic("Could not find def!");
+            if(vall == defmap.end()){
+                    cerr << "Could not find define: \"" <<  part <<  "\", used on line: " << lineno << "!" << endl;
+                    panic("");
+            }
             insert_instruction(ins, (*vall).second);
             continue;
         }
@@ -229,13 +251,15 @@ for(string line : file){
 
         if(is_ins && is_lbl_val){
             auto vall = lblmap.find(part);
-            if(vall == lblmap.end()) panic("Could not find label!");
+            if(vall == lblmap.end()){
+                cerr << "Could not find label: \"" << part << "\", used on line: " << lineno << "!" << endl;
+                panic("");
+            }
             insert_instruction(ins, (*vall).second);
             continue;
         }
         panic("Could not parse line!");
     }
-
 }
 
 }
