@@ -1,0 +1,51 @@
+NOOP  0x0 # Immediate ignored
+TOA   0x1 # Immediate is address
+TOB   0x2 # Immediate is address
+SUM   0x3 # Immediate ignored
+SUB   0x4 # Immediate ignored
+FROMA 0x5 # Immediate is address
+FROMB 0x6 # Immediate is address
+JMP   0x7 # Immediate ignored
+CHNGA 0x8 # Immediate has special meaning
+CHNGB 0x9 # Immediate has special meaning
+AND   0xA # Immediate ignored
+
+
+CHNGA and CHNGB possible immediates:
+DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
+0     1   2    3     4      5        6      7
+
+
+
+JMPC  0xE # Immediate ignored
+JMPZ  0xF # Immediate ignored
+
+JMP, JMPC and JMPZ will jump to the address in the next address to them in ram
+
+Quick List of Instructions:
+NOOP, TOA, TOB, SUM, SUB, AND, FROMA, FROMB, JMP, CHNGA, CHNGB, JMPC, 
+JMPZ
+
+
+/*
+DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
+0     1   2    3     4      5        6      7
+
+Normally: 1. no LOAD, 2. LOAD
+and these:
+CASCADEMOD, CLKMOD, DEF, INMOD
+SET0:   0, 0, 0, 0
+SETFF:  0, 0, 1, 0
+INV:    0, 0, 1, 1
+SETLB1: 0, 1, 1, 0 // CLKMOD is on, and DEF = 1, hopefully OR1 without sidefects
+INC:    0, 1, 1, 1
+SETLB0: 1, 1, 0, 0 // CLKMOD = 1, but no INMOD, so this basically means all ops only affect the first bit
+DEC:    1, 1, 1, 1
+
+Except for NEG:
+where 1. no CLKMOD, 2. CLKMOD
+DEF, LOAD, INMOD
+*/
+
+// Mem size: 0x00 .. 0xff
+
