@@ -154,7 +154,7 @@ int main(){
 
     /// Save value of A to address in immediate
     /// A.K.A: *(immediate) = A
-    rom[FROMA|STEP_3]  = ( RAMENO  | MARLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD );
+    rom[FROMA|STEP_3]  = ( RAMENO | MARLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD );
     rom[FROMA|STEP_4]  = ( AENO   | RAMLOAD    ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Save value of B to address in immediate
@@ -202,16 +202,21 @@ int main(){
 
     rom[AND|STEP_3]    = ALUAND | ALUENO | ALOAD | FEN;
     rom[AND|STEP_4]    = 0;
+
+
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size
     /// That external logic will override this when an actual jump sjould occur
     /// However if a jump does not occur, SINCE JMP is 2 bytes we need to do another add again for the CPU, if we didn't jump
-    /// if(alu == 0) goto immediate;
-    rom[JMPZ|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // Old: PCENO  | MARLOAD
-    rom[JMPZ|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // Old: RAMENO | PCLOAD
 
     /// if(alu_carray == 1) goto immediate;
     rom[JMPC|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // Old: PCENO  | MARLOAD
     rom[JMPC|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // Old: RAMENO | PCLOAD
+
+
+    /// if(alu == 0) goto immediate;
+    rom[JMPZ|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // Old: PCENO  | MARLOAD
+    rom[JMPZ|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // Old: RAMENO | PCLOAD
+
 
     f.write((char*)rom, sizeof(uint32_t)*((1<<5)));
 }

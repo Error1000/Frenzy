@@ -3,28 +3,28 @@
 JMP
 {OUTSIDE} ; ESCAPE HEADER
 ;-----------------
-cache_a: 0xA
+cache_a: 69
 cache_b: 0x2
 res:     0x0
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 OUTSIDE:
-	TOA 
+	TOA 	;A = cache_a
 	{cache_a}
 LOOP:
-	TOB 
+	TOB ; B = res
 	{res}
 	
-	CHNGB 0x1
+	CHNGB 0x1 ; B--
 	
-	FROMB 
+	FROMB ; res = B
 	{res}
 
-	TOB 
+	TOB 	; B = cache_b
 	{cache_b}
 	
-	SUB
-JMPC
+	SUB	; A -= B
+JMPC	; If carry then loop back
 {LOOP} ; Carry should be on after SUB, except when overflowing signed arithmetic, also SUB leaves B inverted, but that dosen't matter for us
 ; CHNGB is done before SUB because it updates flags too
 

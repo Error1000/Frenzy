@@ -14,9 +14,14 @@ OUTSIDE:
 LOOP:	FROMA 
 	{cache} ; c = a
 	
-	SUM ; a += b
+	SUM ; a += b	
 	
 	TOB 
 	{cache} ; b = c
+	JMPC
+	{HLT}
 JMP 
 {LOOP}
+
+HLT: JMP
+{HLT}

@@ -1,6 +1,6 @@
 use std::{collections::HashMap, convert::identity, io::Read, str::FromStr};
 
-use nom::combinator::rest;
+use nom::{character::complete::hex_digit1, combinator::rest};
 use nom::sequence::tuple;
 use nom::{
     branch::alt,
@@ -43,7 +43,7 @@ fn parse_bin_number(input: &str) -> IResult<&str, u8> {
 }
 
 fn parse_hex_number(input: &str) -> IResult<&str, u8> {
-    let (input, (_, snum)) = tuple((tag("0x"), digit1))(input)?;
+    let (input, (_, snum)) = tuple((tag("0x"), hex_digit1))(input)?;
     let (_, num) = str_to_u8(snum, 16)?;
     Ok((input, num))
 }
@@ -91,6 +91,15 @@ fn parse_instruction(input: &str) -> IResult<&str, Instruction> {
         // Then at least one space and an InsData
         opt(tuple((space1, parse_ins_data))).map(|x| x.map(|x| x.1)),
     ))(input)?;
+    match mnemonic{
+	Mnemonic::CHNGA => (),
+	Mnemonic::CHNGB => (),
+	_ => {
+		if immediate.is_some(){
+			panic!("Mnemonic {:?}, does not take immediate!", mnemonic);
+		}
+	}	
+    }
     Ok((
         input,
         Instruction {
@@ -241,7 +250,7 @@ impl FromStr for Mnemonic {
             "AND" => Mnemonic::AND,
             "JMPC" => Mnemonic::JMPC,
             "JMPZ" => Mnemonic::JMPZ,
-            _ => return Err(()),
+            _ => panic!("Unknown mnemonic: {}!", s),
         })
     }
 }
@@ -288,12 +297,13 @@ fn main() {
     };
     let mut data = String::new();
     f.read_to_string(&mut data).unwrap();
-
+    
     let mut lables: HashMap<&str, u8> = HashMap::new();
     let mut statements: Vec<(Statement, u8)> = Vec::new();
 {
     let mut curr_addr: u8 = 0;
     for parsed_line in parser(data.split('\n')) {
+        println!("{:?}", parsed_line);
         let (def, s) = match parsed_line{
             LineResult::Definition(d) => (Some(d), None),
             LineResult::Statement(d, s) => (d, Some(s))
@@ -302,9 +312,9 @@ fn main() {
         // Parse definition
         if let Some(def) = def {
             match def{
-                Definition::LabelDef(l) => {lables.insert(l, curr_addr);},
-                Definition::AddrAndLabelDef(a, l) => {curr_addr = a; lables.insert(l, curr_addr);},
-                Definition::LabelDefAndAddr(l, a) => {lables.insert(l, curr_addr); curr_addr = a;},
+                Definition::LabelDef(l) => {lables.insert(l.trim(), curr_addr);},
+                Definition::AddrAndLabelDef(a, l) => {curr_addr = a; lables.insert(l.trim(), curr_addr);},
+                Definition::LabelDefAndAddr(l, a) => {lables.insert(l.trim(), curr_addr); curr_addr = a;},
                 Definition::Addr(a) => {curr_addr = a;},
             }
         }
@@ -316,6 +326,7 @@ fn main() {
         }
     }
 }
+    println!("{:?}", lables);
 
     // Now that we parsed all definitions parse statements
     for (s, addr) in statements{
@@ -334,6 +345,6 @@ fn main() {
             },
             Statement::LabelUse(lbl) => lables[lbl]
         };
-        println!("{:#x}: {:#x}", addr, resolved);
+        println!("{:#x},", /*addr, */ resolved);
     }
 }
