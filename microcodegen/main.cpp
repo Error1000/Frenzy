@@ -1,21 +1,21 @@
-#include <iostream>
 #include <fstream>
+#include <format>
 
 using namespace std;
 /*
 
-UNUSED        UNUSED       UNUSED     ACNTRLLINEMOD
-BCNTRLLINEMOD FEN          SQSH0      SQSH1
-SQSH2         BCASCADEMOD  BCLKMOD    BLOAD
-BINMOD        BENDEF       ALUCIN     ACASCADEMOD
-ACLKMOD       ALOAD        AINMOD     AENDEF
-PCCASCADEMOD  PCCLKMOD     PCLOAD     PCINMOD
-PCENDEF       RAMLOAD      MARENDEF   MARINMOD
-MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
+UNUSED        MARPCPRIVBUS ALUAND        ACNTRLLINEMOD
+BCNTRLLINEMOD FEN          SQSH0         SQSH1
+SQSH2         BCASCADEMOD  BCLKMOD       BLOAD
+BINMOD        BENDEF       ALUCIN        ACASCADEMOD
+ACLKMOD       ALOAD        AINMOD        AENDEF
+PCCASCADEMOD  PCCLKMOD     PCLOAD        PCINMOD
+PCENDEF       RAMLOAD      MARENDEF      MARINMOD
+MARLOAD       MARCLKMOD    MARCASCADE    IRLOAD
 
 
 */
-
+#define MARPCPRIVBUS    0b01000000000000000000000000000000
 #define ALUAND          0b00100000000000000000000000000000
 #define ACNTRLLINEMOD   0b00010000000000000000000000000000
 #define BCNTRLLINEMOD   0b00001000000000000000000000000000
@@ -76,8 +76,8 @@ MARLOAD       MARCLKMOD    MARCASCADE IRLOAD
 /// A cycle always consists of 4 steps, at least for now
 /// STEP_1 and STEP_2 are handled in hardware
 /// Right now they do the following control lines:
-/// STEP_1: MARLOAD | PCENO  | PCENDEF | PCINMOD | PCCLKMOD
-/// STEP_2: RAMENO  | IRLOAD | PCENDEF | PCINMOD | PCCLKMOD | PCLOAD
+/// STEP_1: (MARLOAD | PCENO)  | (PCENDEF | PCINMOD | PCCLKMOD)
+/// STEP_2: (RAMENO  | IRLOAD) | (PCENDEF | PCINMOD | PCCLKMOD | PCLOAD) | (MARPCPRIVBUS | MARLOAD | PCENO)
 /// Basically STEP1 prepares the PC for incrementing while copying the current value of the PC to MAR
 /// STEP_2 Takes the value from RAM at the location pointed to by MAR and loads it into IR, oh and also it finishes adding one to PC by enabling PCLOAD
 /// The control lines for STEP_3 and STEP_4 are then the output of the ROM which takes as address the first 4 bits of the IR, and a single bit indicating wheter this is STEP_3 or STEP_4, for a total of 5 address bits
@@ -135,15 +135,15 @@ int main(){
     rom[NOOP|STEP_3]   = 0;
     rom[NOOP|STEP_4]   = 0;
 
-    /// Load data from address from immediate to A
-    /// A.K.A: A = *(immediate)
-    rom[TOA|STEP_3]    = MARLOAD | IRENO;
-    rom[TOA|STEP_4]    = RAMENO  | ALOAD;
+    /// Load data from immediate to A
+    /// A.K.A: A = *address
+    rom[TOA|STEP_3]    = ( RAMENO  | MARLOAD   ) | PCINMOD | PCENDEF | PCCLKMOD;
+    rom[TOA|STEP_4]    = ( RAMENO  | ALOAD     ) | PCINMOD | PCENDEF | PCCLKMOD | PCLOAD;
 
-    /// Load data from address from immediate to B
-    /// A.K.A: B = *(immediate)
-    rom[TOB|STEP_3]    = MARLOAD | IRENO;
-    rom[TOB|STEP_4]    = RAMENO  | BLOAD;
+    /// Load data from address to B
+    /// A.K.A: B = *address
+    rom[TOB|STEP_3]    = ( RAMENO | MARLOAD ) | PCINMOD | PCENDEF | PCCLKMOD;
+    rom[TOB|STEP_4]    = ( RAMENO | BLOAD   ) | PCINMOD | PCENDEF | PCCLKMOD | PCLOAD;
 
     /// Essentially A += B, saving flags
     rom[SUM|STEP_3]    = ALUENO  | ALOAD | FEN;
@@ -165,7 +165,7 @@ int main(){
 
     /// Go to address at address that's in the next byte to JMP in memory
     /// A.K.A: goto immediate;
-    rom[JMP|STEP_3]    = PCENO  | MARLOAD;
+    rom[JMP|STEP_3]    = 0;
     rom[JMP|STEP_4]    = RAMENO | PCLOAD;
 
     /// Take action on A based on immediate
@@ -204,16 +204,15 @@ int main(){
     rom[AND|STEP_3]    = ALUAND | ALUENO | ALOAD | FEN;
     rom[AND|STEP_4]    = 0;
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size
-    /// So because of that external logic, we kind of have to set this to 0
-
-    /// SINCE JMP is 2 bytes we need to do another add again for the CPU, if we didn't jump
+    /// That external logic will override this when an actual jump sjould occur
+    /// However if a jump does not occur, SINCE JMP is 2 bytes we need to do another add again for the CPU, if we didn't jump
     /// if(alu == 0) goto immediate;
-    rom[JMPZ|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // PCENO  | MARLOAD
-    rom[JMPZ|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // RAMENO | PCLOAD
+    rom[JMPZ|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // Old: PCENO  | MARLOAD
+    rom[JMPZ|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // Old: RAMENO | PCLOAD
 
     /// if(alu_carray == 1) goto immediate;
-    rom[JMPC|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // PCENO  | MARLOAD
-    rom[JMPC|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // RAMENO | PCLOAD
+    rom[JMPC|STEP_3]   = PCENDEF | PCINMOD | PCCLKMOD;          // Old: PCENO  | MARLOAD
+    rom[JMPC|STEP_4]   = PCENDEF | PCINMOD | PCCLKMOD | PCLOAD; // Old: RAMENO | PCLOAD
 
     f.write((char*)rom, sizeof(uint32_t)*((1<<5)));
 }

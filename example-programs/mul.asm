@@ -4,8 +4,8 @@ JMP
 {OUTSIDE} ; ESCAPE HEADER
 ;-----------------
 cache: 0x00
-val1: 0x04
-val2: 0x19
+val1: 10
+val2: 10
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 OUTSIDE:
