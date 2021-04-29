@@ -11,8 +11,12 @@ OUTSIDE:
 	CHNGA 0x1
 	CHNGB 0x1
 
-LOOP:	FROMA {cache} ; c = a
+LOOP:	FROMA 
+	{cache} ; c = a
+	
 	SUM ; a += b
-	TOB {cache} ; b = c
+	
+	TOB 
+	{cache} ; b = c
 JMP 
 {LOOP}
