@@ -1,10 +1,10 @@
 - NOOP  0x0 # Immediate ignored
-- TOA   0x1 # Immediate is address
-- TOB   0x2 # Immediate is address
+- TOA   0x1 # Immediate ignored
+- TOB   0x2 # Immediate ignored
 - SUM   0x3 # Immediate ignored
 - SUB   0x4 # Immediate ignored
-- FROMA 0x5 # Immediate is address
-- FROMB 0x6 # Immediate is address
+- FROMA 0x5 # Immediate ignored
+- FROMB 0x6 # Immediate ignored
 - JMP   0x7 # Immediate ignored
 - CHNGA 0x8 # Immediate has special meaning
 - CHNGB 0x9 # Immediate has special meaning

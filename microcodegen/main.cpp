@@ -1,5 +1,4 @@
 #include <fstream>
-#include <format>
 
 using namespace std;
 /*
@@ -15,7 +14,7 @@ MARLOAD       MARCLKMOD    MARCASCADE    IRLOAD
 
 
 */
-#define MARPCPRIVBUS    0b01000000000000000000000000000000
+// #define MARPCPRIVBUS    0b01000000000000000000000000000000
 #define ALUAND          0b00100000000000000000000000000000
 #define ACNTRLLINEMOD   0b00010000000000000000000000000000
 #define BCNTRLLINEMOD   0b00001000000000000000000000000000
@@ -137,13 +136,13 @@ int main(){
 
     /// Load data from immediate to A
     /// A.K.A: A = *address
-    rom[TOA|STEP_3]    = ( RAMENO  | MARLOAD   ) | PCINMOD | PCENDEF | PCCLKMOD;
-    rom[TOA|STEP_4]    = ( RAMENO  | ALOAD     ) | PCINMOD | PCENDEF | PCCLKMOD | PCLOAD;
+    rom[TOA|STEP_3]    = ( RAMENO  | MARLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD );
+    rom[TOA|STEP_4]    = ( RAMENO  | ALOAD     ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Load data from address to B
     /// A.K.A: B = *address
-    rom[TOB|STEP_3]    = ( RAMENO | MARLOAD ) | PCINMOD | PCENDEF | PCCLKMOD;
-    rom[TOB|STEP_4]    = ( RAMENO | BLOAD   ) | PCINMOD | PCENDEF | PCCLKMOD | PCLOAD;
+    rom[TOB|STEP_3]    = ( RAMENO | MARLOAD ) | ( PCINMOD | PCENDEF | PCCLKMOD );
+    rom[TOB|STEP_4]    = ( RAMENO | BLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Essentially A += B, saving flags
     rom[SUM|STEP_3]    = ALUENO  | ALOAD | FEN;
@@ -155,13 +154,13 @@ int main(){
 
     /// Save value of A to address in immediate
     /// A.K.A: *(immediate) = A
-    rom[FROMA|STEP_3]  = IRENO  | MARLOAD;
-    rom[FROMA|STEP_4]  = AENO   | RAMLOAD;
+    rom[FROMA|STEP_3]  = ( RAMENO  | MARLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD );
+    rom[FROMA|STEP_4]  = ( AENO   | RAMLOAD    ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Save value of B to address in immediate
     /// A.K.A; *(immediate) = B
-    rom[FROMB|STEP_3]  = IRENO  | MARLOAD;
-    rom[FROMB|STEP_4]  = BENO   | RAMLOAD;
+    rom[FROMB|STEP_3]  = ( RAMENO  | MARLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD );
+    rom[FROMB|STEP_4]  = ( BENO   | RAMLOAD    ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Go to address at address that's in the next byte to JMP in memory
     /// A.K.A: goto immediate;
