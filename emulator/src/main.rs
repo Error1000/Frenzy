@@ -48,37 +48,31 @@ impl CpuState{
 fn main() {
    let mut memory = [
     0x70,
-    0x13,
-    0x6,
+    0x10,
+    0x81,
+    0x18,
     0x50,
     0x2,
-    0x60,
-    0x0,
     0x20,
     0x2,
     0x30,
     0xe0,
+    0xd,
+    0x70,
     0xe,
-    0x70,
-    0xf,
     0x81,
-    0x20,
-    0x0,
     0x70,
-    0x1e,
+    0x18,
     0x10,
     0x2,
     0x20,
-    0x1b,
-    0x60,
-    0x12,
-    0x70,
     0x3,
-    0x1c,
-    0x80,
-    0x80,
+    0x60,
+    0xf,
     0x70,
-    0x1e,
+    0x4,
+    0x70,
+    0x18,
    ];
 
    let mut cpu = CpuState::default();
@@ -102,21 +96,21 @@ fn main() {
             cpu.Breg = memory[cpu.mar as usize]; // RAMENO | BLOAD
         },
         Mnemonic::SUM => {
-            let (res, _) = cpu.Areg.overflowing_add(cpu.Breg);
-            cpu.Areg = res; 
-
+            let (res, c) = cpu.Areg.overflowing_add(cpu.Breg);
+            cpu.Areg = res;
             // FEN
-            cpu.carry_flag = cpu.Areg.overflowing_add(cpu.Breg).1;
-            cpu.zero_flag = cpu.Areg.overflowing_add(cpu.Breg).0 == 0;
+            cpu.carry_flag = c;
+            cpu.zero_flag = res == 0;
+             
         },
         Mnemonic::SUB => {
             cpu.Breg = (-(cpu.Breg as i8)) as u8;
-            let (res, _) = cpu.Areg.overflowing_add(cpu.Breg);
+            let (res, c) = cpu.Areg.overflowing_add(cpu.Breg);
             cpu.Areg = res;
 
             // FEN
-            cpu.carry_flag = cpu.Areg.overflowing_add(cpu.Breg).1;
-            cpu.zero_flag = cpu.Areg.overflowing_add(cpu.Breg).0 == 0;
+            cpu.carry_flag = c;
+            cpu.zero_flag = res == 0;
         },
         Mnemonic::FROMA => {
             cpu.mar = memory[cpu.mar as usize]; // RAMENO | MARLOAD

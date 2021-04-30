@@ -1,13 +1,13 @@
+; Note: We are never going to need to execute this "startup" code ever again once we do it, so we can repurpose it as data storage ... :)
 regB: JMP
 cache: {_start}
 regA:  6
+sSITE1_ADDR: {sSITE1}
+
 
 SHLA:
 	FROMA ; regA = A
 	{regA}
-
-	FROMB ; regB = B
-	{regB}
 
 	TOB   ; B = regA
 	{regA}
@@ -22,13 +22,8 @@ SHLA:
 
 	OVFLOW: CHNGA 0x1 ; 2. Then add one to A
   
-    SHLA_END:
-
-	TOB	; B = regB // Restore B
-	{regB}
-
-				JMP	; return
-SHLA_RET_ADDR:	{HLT}
+    SHLA_END:	JMP	; return
+SHLA_RET_ADDR:	{HLT} ; Address will be overriden by caller
 
 ;eigth: 8
 ;SHRA:
@@ -80,25 +75,21 @@ SHLA_RET_ADDR:	{HLT}
 
 _start:
 
-	TOA		; A = 6
+	TOA		
 	{regA}
 
-	; SHLA_RET_ADDr = sSITE1 // mangles B
+	; SHLA_RET_ADDR = sSITE1 // mangles B
 	TOB		; B = sSITE1
 	{sSITE1_ADDR}
 	FROMB	; SHLA_RET_ADDR = B
 	{SHLA_RET_ADDR}
 
-	; shla() // Double A, so now A should be 12
+	; shla() // Double A
 	JMP 
 	{SHLA}
 
-	sSITE1_ADDR: {sSITE1}
-	sSITE1: 
+	sSITE1: ; This is where the SHLA jump wil jump back to
 
-	CHNGA 0x0	 ; A--
-	CHNGA 0x0	 ; A--
-	; A = 10 now, hopefully
-
+	
 HLT: JMP 
 {HLT}
