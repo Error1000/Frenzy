@@ -48,37 +48,70 @@ impl CpuState{
 fn main() {
    let mut memory = [
     0x70,
-    0x10,
-    0x81,
-    0x18,
+    0x30,
+    0x6,
+    0x38,
+    0x2a,
     0x50,
     0x2,
+    0x60,
+    0x0,
     0x20,
     0x2,
     0x30,
     0xe0,
-    0xd,
+    0x10,
     0x70,
-    0xe,
+    0x11,
     0x81,
+    0x20,
+    0x0,
     0x70,
-    0x18,
+    0x38,
+    0x8,
+    0x50,
+    0x2,
+    0x60,
+    0x0,
+    0x20,
+    0x4,
+    0x60,
+    0x14,
+    0x20,
+    0x15,
+    0x50,
+    0x2,
+    0x83,
+    0x90,
+    0x10,
+    0x2,
+    0xf0,
+    0x2c,
+    0x70,
+    0x5,
+    0x70,
+    0x20,
+    0x20,
+    0x0,
+    0x70,
+    0x38,
     0x10,
     0x2,
     0x20,
     0x3,
     0x60,
-    0xf,
+    0x2f,
     0x70,
-    0x4,
+    0x16,
     0x70,
-    0x18,
+    0x38,
    ];
 
    let mut cpu = CpuState::default();
 
    loop{
     cpu.mar = cpu.pc;
+    println!("{}", cpu.mar);
     cpu.ir = memory[cpu.mar as usize];
     cpu.pc += 1;
     cpu.mar = cpu.pc;
@@ -126,7 +159,7 @@ fn main() {
             if memory[cpu.mar as usize] == cpu.pc - 1{
                 println!("Detected infinite loop, halting!");
                 println!("Cpu state: {:?}", cpu);
-                println!("Dumping memory:\n{:?}", memory);
+                println!("Dumping memory:\n{:#x?}", memory);
                 break;
             }
             cpu.pc = memory[cpu.mar as usize]; // RAMENO | PCLOAD

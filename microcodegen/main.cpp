@@ -145,12 +145,12 @@ int main(){
     rom[TOB|STEP_4]    = ( RAMENO | BLOAD   ) | ( PCINMOD | PCENDEF | PCCLKMOD | PCLOAD );
 
     /// Essentially A += B, saving flags
-    rom[SUM|STEP_3]    = ALUENO  | ALOAD | FEN;
-    rom[SUM|STEP_4]    = 0;
+    rom[SUM|STEP_3]    = FEN;
+    rom[SUM|STEP_4]    = ALUENO  | ALOAD;
 
     /// Essentially A -= B, saving flags, and inverting B
-    rom[SUB|STEP_3]    = BENDEF | BLOAD | BINMOD; // INVB
-    rom[SUB|STEP_4]    = ALUENO | ALOAD | ALUCIN | FEN; // Add A to B, enabling Carry in
+    rom[SUB|STEP_3]    = BENDEF | BLOAD | BINMOD | FEN; // INVB
+    rom[SUB|STEP_4]    = ALUENO | ALOAD | ALUCIN; // Add A to B, enabling Carry in
 
     /// Save value of A to address in immediate
     /// A.K.A: *(immediate) = A
@@ -200,8 +200,8 @@ int main(){
     rom[CHNGB|STEP_4]  = IRENO  | BCNTRLLINEMOD | FEN;
 
 
-    rom[AND|STEP_3]    = ALUAND | ALUENO | ALOAD | FEN;
-    rom[AND|STEP_4]    = 0;
+    rom[AND|STEP_3]    = FEN;
+    rom[AND|STEP_4]    = ALUAND | ALUENO | ALOAD;
 
 
     /// If zero or carry flags are actually set that is handled by external combinatorial logic to help dramatiaclly reduce rom size

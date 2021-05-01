@@ -10,6 +10,7 @@ use nom::{
     AsChar, IResult, Parser,
 };
 use nom::{character::complete::char, combinator::recognize};
+use std::io::prelude::*;
 
 fn consume_comment(input: &str) -> IResult<&str, ()> {
     let (input, _) = tuple((char(';'), rest))(input)?;
@@ -300,6 +301,7 @@ fn main() {
     
     let mut lables: HashMap<&str, u8> = HashMap::new();
     let mut statements: Vec<(Statement, u8)> = Vec::new();
+    
 {
     let mut curr_addr: u8 = 0;
     for parsed_line in parser(data.split('\n')) {
@@ -326,7 +328,11 @@ fn main() {
         }
     }
 }
+
+    let mut outf = std::fs::OpenOptions::new().write(true).create(true).open("res.hex").expect("Opening out file!");
     println!("{:?}", lables);
+    
+    outf.write(b"v2.0 raw\n").unwrap();
 
     // Now that we parsed all definitions parse statements
     for (s, addr) in statements{
@@ -345,6 +351,7 @@ fn main() {
             },
             Statement::LabelUse(lbl) => lables[lbl]
         };
-        println!("{:#x},", /*addr, */ resolved);
+        write!(outf, "{:02x}\n", resolved).unwrap();
+        println!("{}: {:#x}", addr,  resolved);
     }
 }

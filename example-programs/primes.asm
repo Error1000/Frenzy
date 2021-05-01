@@ -3,11 +3,13 @@ regB: JMP
 cache: {_start}
 regA:  6
 sSITE1_ADDR: {sSITE1}
-
+SITE_ADDR: {SITE}
 
 SHLA:
 	FROMA ; regA = A
 	{regA}
+	FROMB
+	{regB}
 
 	TOB   ; B = regA
 	{regA}
@@ -22,55 +24,54 @@ SHLA:
 
 	OVFLOW: CHNGA 0x1 ; 2. Then add one to A
   
-    SHLA_END:	JMP	; return
+SHLA_END:
+	TOB
+	{regB}
+	JMP	; return
 SHLA_RET_ADDR:	{HLT} ; Address will be overriden by caller
 
-;eigth: 8
-;SHRA:
-;
-;	FROMA
-;	{regA}
-;
-;	FROMB
-;	{regB}
-;
-;
-;
-;	TOB 
-;	{SITE}
-;	FROMB 
-;	{SHLA_RET_ADDR}
-;
-;	TOB		; B = 8
-;	{eigth}
-;
-;	SHRA_LOOP:
-;		; if(--b == 0) goto SHRA_END;
-;		FROMA
-;		{regA}
-;		CHNGA 0x3
-;		CHNGB 0x0
-;		TOA
-;		{regA}
-;		JMPZ 
-;		{SHRA_END}
-;
-;		JMP
-;		{SHLA}
-;		SITE:
-;	JMP
-;	{SHRA_LOOP}
-;
-;	SHRA_END:
-;
-;	TOB
-;	{regB}
-;
-;	JMP
-;	{SHLA}
-;
-;	JMP 
-;	{SHRA_RET_ADDR}
+eigth: 8
+SHRA:
+
+	FROMA
+	{regA}
+
+	FROMB
+	{regB}
+
+
+	TOB 
+	{SITE_ADDR}
+	FROMB 
+	{SHLA_RET_ADDR}
+
+	TOB		; B = 8
+	{eigth}
+
+	SHRA_LOOP:
+		; if(--b == 0) goto SHRA_END;
+		FROMA
+		{regA}
+		CHNGA 0x3 ; A = 0
+		CHNGB 0x0 ; B--;
+		TOA
+		{regA}
+		JMPZ 
+		{SHRA_END}
+
+		JMP
+		{SHLA}
+		SITE:
+	JMP
+	{SHRA_LOOP}
+
+	SHRA_END:
+
+	TOB	; Restore B
+	{regB}
+
+				JMP 
+SHRA_RET_ADDR:	{HLT}
 
 
 _start:
@@ -78,15 +79,15 @@ _start:
 	TOA		
 	{regA}
 
-	; SHLA_RET_ADDR = sSITE1 // mangles B
+	; SHRA_RET_ADDR = sSITE1 // mangles B
 	TOB		; B = sSITE1
 	{sSITE1_ADDR}
-	FROMB	; SHLA_RET_ADDR = B
-	{SHLA_RET_ADDR}
+	FROMB	; SHRA_RET_ADDR = B
+	{SHRA_RET_ADDR}
 
-	; shla() // Double A
+	; shra() // Double A
 	JMP 
-	{SHLA}
+	{SHRA}
 
 	sSITE1: ; This is where the SHLA jump wil jump back to
 

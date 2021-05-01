@@ -751,7 +751,7 @@
         </entry>
         <entry>
           <string>Frequency</string>
-          <int>5</int>
+          <int>50</int>
         </entry>
       </elementAttributes>
       <pos x="-580" y="-2500"/>
@@ -3490,9 +3490,9 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>0,1000588,1000588,5804000,1c0000,1000588,1000588,0,12000000,a000000,25804000,0,0,
-0,580,580,0,1004780,1100780,0,5824000,28007c0,38007c0,1000200,16000000,e000000,0,
-0,0,0,780,780</data>
+          <data>0,1000588,1000588,4000000,41c0000,1000588,1000588,0,12000000,a000000,4000000,0,0,
+0,580,580,0,1004780,1100780,1804000,1824000,28007c0,38007c0,1000200,16000000,e000000,
+21804000,0,0,0,780,780</data>
         </entry>
         <entry>
           <string>lastDataFile</string>
@@ -6460,6 +6460,16 @@ plexers are important!!!</string>
         </entry>
       </elementAttributes>
       <pos x="-1560" y="-1440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="2900"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -12488,16 +12498,20 @@ plexers are important!!!</string>
       <p2 x="60" y="2900"/>
     </wire>
     <wire>
-      <p1 x="1640" y="2900"/>
-      <p2 x="1840" y="2900"/>
-    </wire>
-    <wire>
       <p1 x="380" y="2900"/>
       <p2 x="560" y="2900"/>
     </wire>
     <wire>
       <p1 x="600" y="2900"/>
       <p2 x="760" y="2900"/>
+    </wire>
+    <wire>
+      <p1 x="1640" y="2900"/>
+      <p2 x="1680" y="2900"/>
+    </wire>
+    <wire>
+      <p1 x="1720" y="2900"/>
+      <p2 x="1840" y="2900"/>
     </wire>
     <wire>
       <p1 x="300" y="-1880"/>
