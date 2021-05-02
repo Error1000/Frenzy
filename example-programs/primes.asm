@@ -2,19 +2,17 @@
 regB: JMP
 cache: {_start}
 regA:  6
-sSITE1_ADDR: {sSITE1}
-SITE_ADDR: {SITE}
 
 SHLA:
-	FROMA ; regA = A
+	FROMA 
 	{regA}
-	FROMB
+	FROMB 
 	{regB}
 
-	TOB   ; B = regA
+	TOB  
 	{regA}
 
-	SUM	  ; A += B ( which is regA ) // Basically doubles A
+	SUM
 
 	JMPC ; 1. If carry 
 	{OVFLOW}
@@ -25,55 +23,54 @@ SHLA:
 	OVFLOW: CHNGA 0x1 ; 2. Then add one to A
   
 SHLA_END:
-	TOB
+	TOB     ; Restore B
 	{regB}
 	JMP	; return
 SHLA_RET_ADDR:	{HLT} ; Address will be overriden by caller
 
+
 eigth: 8
+SHLA_RET_SITE_ADDR: {SHLA_RET_SITE}
 SHRA:
-
-	FROMA
-	{regA}
-
 	FROMB
 	{regB}
 
 
 	TOB 
-	{SITE_ADDR}
+	{SHLA_RET_SITE_ADDR}
 	FROMB 
 	{SHLA_RET_ADDR}
 
 	TOB		; B = 8
 	{eigth}
 
-	SHRA_LOOP:
+	SHRA_LOOP: ; unused but useful for clarity
+
+                SHLA_RET_SITE: ; This is where SHLA Jump will jump back to
 		; if(--b == 0) goto SHRA_END;
-		FROMA
+		FROMA   ; Save A
 		{regA}
 		CHNGA 0x3 ; A = 0
 		CHNGB 0x0 ; B--;
-		TOA
+		TOA     ; Restore A
 		{regA}
 		JMPZ 
 		{SHRA_END}
 
 		JMP
 		{SHLA}
-		SITE:
-	JMP
-	{SHRA_LOOP}
+        ;------------------
 
 	SHRA_END:
 
 	TOB	; Restore B
 	{regB}
 
-				JMP 
-SHRA_RET_ADDR:	{HLT}
+		JMP 
+SHRA_RET_ADDR:	{HLT}; Will be overriden by caller
 
 
+sSITE1_ADDR: {sSITE1}
 _start:
 
 	TOA		
@@ -89,7 +86,7 @@ _start:
 	JMP 
 	{SHRA}
 
-	sSITE1: ; This is where the SHLA jump wil jump back to
+	sSITE1: ; This is where the SHRA jump will jump back to
 
 	
 HLT: JMP 

@@ -3699,14 +3699,15 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string>Here to make sure rom isn&apos;t activated
+          <string>Bad hack,
+here to make sure rom isn&apos;t activated
 with wrong address, causing
 control line bursts
 which can be bad for some components
 ( registers i&apos;m looking at you )</string>
         </entry>
       </elementAttributes>
-      <pos x="-2200" y="2980"/>
+      <pos x="-2220" y="3000"/>
     </visualElement>
     <visualElement>
       <elementName>NOr</elementName>
@@ -3839,7 +3840,7 @@ however i think this makes more sense
 and it&apos;s pretty trivial to optimise this if needed.</string>
         </entry>
       </elementAttributes>
-      <pos x="420" y="6840"/>
+      <pos x="760" y="6860"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -4456,7 +4457,7 @@ and it&apos;s pretty trivial to optimise this if needed.</string>
 when both INMOD and ENIN
 are enabled,
 
-if any one of those is 0ff 
+if any one of those is off 
 T Flip-Flop mode is off.</string>
         </entry>
       </elementAttributes>
@@ -4471,7 +4472,8 @@ T Flip-Flop mode is off.</string>
         </entry>
         <entry>
           <string>Description</string>
-          <string>Rationale for the AND gate at INMOD and ENIN of JK flip-lfop registers:
+          <string>Rationale for the AND gate at INMOD and ENIN of the JK flip-lfop registers:
+-------------------------------------------
 If INMOD = 1, but ENIN = 0, 
 then, even though you have requested T Flip-Flop mode, your request cannot be completed
 because you need D Flip-Flop mode to fullfill ENIN = 0, a.k.a to make sure the ouput
@@ -4479,14 +4481,14 @@ dosen&apos;t change on clock pulse.
 
 If INMOD = 0, but ENIN = whatever,
 then you have requested D Flip-Flop mode, and since D Flip-Flop mode
-iworks no matter what ENIN is, we can just enable D Flip-Flop mode.
+works no matter what ENIN is, we can just enable D Flip-Flop mode.
 
 Therfore
-you want both INMOD = 1 and ENIN = 1 to enable T Flip-Flop mode otherwise 
+you want only INMOD = 1 and ENIN = 1 to enable T Flip-Flop mode otherwise 
 you want D Flip-Flop mode</string>
         </entry>
       </elementAttributes>
-      <pos x="1460" y="-2560"/>
+      <pos x="380" y="-2160"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -4549,7 +4551,7 @@ you want D Flip-Flop mode</string>
 when both INMOD and ENIN
 are enabled,
 
-if any one of those is 0ff 
+if any one of those is off 
 T Flip-Flop mode is off.</string>
         </entry>
       </elementAttributes>
@@ -4568,7 +4570,7 @@ T Flip-Flop mode is off.</string>
 when both INMOD and ENIN
 are enabled,
 
-if any one of those is 0ff 
+if any one of those is off 
 T Flip-Flop mode is off.</string>
         </entry>
       </elementAttributes>
@@ -5948,7 +5950,7 @@ ACNTRLLINEMOD is on</string>
         <entry>
           <string>Description</string>
           <string>Both 3 and 4,
-override default to add one to pc
+override the default to add one to pc
 which happens normally.</string>
         </entry>
       </elementAttributes>
@@ -6310,7 +6312,7 @@ which happens normally.</string>
           <string>Note to future self,
 if we add something 
 else to the rom on jmpz/jmpc, 
-then we needs to make sure 
+then we need to make sure 
 it is overriden correctly here!!!
 This is why the step 3 and 4 
 plexers are important!!!</string>
@@ -6456,7 +6458,7 @@ plexers are important!!!</string>
         </entry>
         <entry>
           <string>delayTime</string>
-          <int>4</int>
+          <int>5</int>
         </entry>
       </elementAttributes>
       <pos x="-1560" y="-1440"/>
@@ -6470,6 +6472,54 @@ plexers are important!!!</string>
         </entry>
       </elementAttributes>
       <pos x="1720" y="2900"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Delay</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-1560" y="-1560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Bad hack to wait
+for PC to increment
+before loading to MAR,
+in MICROSTEP2,
+delay amount was found
+by trial and error</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-1520" y="-1560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>T-Flip-Flop mode is only on 
+when both INMOD and ENIN
+are enabled,
+
+if any one of those is off 
+T Flip-Flop mode is off.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-2080" y="-1480"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -10134,10 +10184,6 @@ plexers are important!!!</string>
       <p2 x="-1760" y="7680"/>
     </wire>
     <wire>
-      <p1 x="-1560" y="-1540"/>
-      <p2 x="-440" y="-1540"/>
-    </wire>
-    <wire>
       <p1 x="700" y="1540"/>
       <p2 x="1080" y="1540"/>
     </wire>
@@ -10340,6 +10386,10 @@ plexers are important!!!</string>
     <wire>
       <p1 x="560" y="2600"/>
       <p2 x="580" y="2600"/>
+    </wire>
+    <wire>
+      <p1 x="-1560" y="-1580"/>
+      <p2 x="-440" y="-1580"/>
     </wire>
     <wire>
       <p1 x="-1040" y="6700"/>
@@ -13726,8 +13776,8 @@ plexers are important!!!</string>
       <p2 x="-1560" y="7320"/>
     </wire>
     <wire>
-      <p1 x="-1560" y="-1540"/>
-      <p2 x="-1560" y="-1520"/>
+      <p1 x="-1560" y="-1580"/>
+      <p2 x="-1560" y="-1560"/>
     </wire>
     <wire>
       <p1 x="-1560" y="-1400"/>
@@ -19658,12 +19708,12 @@ plexers are important!!!</string>
       <p2 x="-440" y="1060"/>
     </wire>
     <wire>
-      <p1 x="-440" y="-1540"/>
+      <p1 x="-440" y="-1580"/>
       <p2 x="-440" y="420"/>
     </wire>
     <wire>
       <p1 x="-440" y="-1640"/>
-      <p2 x="-440" y="-1540"/>
+      <p2 x="-440" y="-1580"/>
     </wire>
     <wire>
       <p1 x="-440" y="6120"/>
