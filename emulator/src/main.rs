@@ -1,4 +1,4 @@
-use std::mem;
+use std::{fs::OpenOptions, io::Read};
 
 
 // I didn't use an enum because it makes matching on u8 easier.
@@ -25,6 +25,7 @@ mod Mnemonic {
                 //JMP, JMPC and JMPZ will jump to the address in the next address to them in ram
 }
 #[derive(Default, Debug)]
+#[allow(non_snake_case)]
 struct CpuState{
     pub pc: u8,
     pub ir: u8,
@@ -46,72 +47,15 @@ impl CpuState{
 }
 
 fn main() {
-   let mut memory = [
-    0x70,
-    0x2c,
-    0x06,
-    0x50,
-    0x02,
-    0x60,
-    0x00,
-    0x20,
-    0x02,
-    0x30,
-    0xe0,
-    0x0e,
-    0x70,
-    0x0f,
-    0x81,
-    0x20,
-    0x00,
-    0x70,
-    0x34,
-    0x08,
-    0x1d,
-    0x60,
-    0x00,
-    0x20,
-    0x14,
-    0x60,
-    0x12,
-    0x20,
-    0x13,
-    0x50,
-    0x02,
-    0x83,
-    0x90,
-    0x10,
-    0x02,
-    0xf0,
-    0x27,
-    0x70,
-    0x03,
-    0x20,
-    0x00,
-    0x70,
-    0x34,
-    0x34,
-    0x10,
-    0x02,
-    0x20,
-    0x2b,
-    0x60,
-    0x2a,
-    0x70,
-    0x15,
-    0x70,
-    0x34,
-    0x70,
-    0x16,
-    0x70,
-    0x38
-   ];
+    let mut f = OpenOptions::new().read(true).write(false).create(false).truncate(false).open("/tmp/res.hex").expect("Opening mem file!");
+    let mut s = String::new();
+    f.read_to_string(&mut s).unwrap();
+    let mut memory: Vec<u8> = s.split('\n').into_iter().skip(1).filter(|x|!x.is_empty()).map(|x|u8::from_str_radix(x, 16).unwrap()).collect();
 
    let mut cpu = CpuState::default();
 
    loop{
     cpu.mar = cpu.pc;
-    println!("{}", cpu.mar);
     cpu.ir = memory[cpu.mar as usize];
     cpu.pc += 1;
     cpu.mar = cpu.pc;
@@ -128,7 +72,14 @@ fn main() {
             cpu.pc += 1;
             cpu.Breg = memory[cpu.mar as usize]; // RAMENO | BLOAD
         },
-        Mnemonic::SUM => {
+
+        Mnemonic::AND => {  // FEN before setting A but after AND-ing
+            cpu.carry_flag = cpu.Areg.overflowing_add(cpu.Breg).1;
+            let res = cpu.Areg & cpu.Breg;
+            cpu.Areg = res;
+            cpu.zero_flag = res == 0;
+        },
+        Mnemonic::SUM => { // FEN before setting A, but after adding
             let (res, c) = cpu.Areg.overflowing_add(cpu.Breg);
             cpu.Areg = res;
             // FEN
@@ -136,7 +87,7 @@ fn main() {
             cpu.zero_flag = res == 0;
              
         },
-        Mnemonic::SUB => {
+        Mnemonic::SUB => { // FEN before setting A, but after subtracting
             cpu.Breg = (-(cpu.Breg as i8)) as u8;
             let (res, c) = cpu.Areg.overflowing_add(cpu.Breg);
             cpu.Areg = res;
@@ -159,7 +110,7 @@ fn main() {
             if memory[cpu.mar as usize] == cpu.pc - 1{
                 println!("Detected infinite loop, halting!");
                 println!("Cpu state: {:?}", cpu);
-                println!("Dumping memory:\n{:#x?}", memory);
+                println!("Dumping memory:\n {:x?}", memory);
                 break;
             }
             cpu.pc = memory[cpu.mar as usize]; // RAMENO | PCLOAD

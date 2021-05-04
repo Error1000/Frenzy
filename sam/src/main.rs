@@ -329,7 +329,7 @@ fn main() {
     }
 }
 
-    let mut outf = std::fs::OpenOptions::new().create(true).write(true).append(false).truncate(true).open("res.hex").expect("Opening out file!");
+    let mut outf = std::fs::OpenOptions::new().create(true).write(true).append(false).truncate(true).open("/tmp/res.hex").expect("Opening out file!");
     println!("{:?}", lables);
     
     outf.write(b"v2.0 raw\n").unwrap();
@@ -352,6 +352,6 @@ fn main() {
             Statement::LabelUse(lbl) => lables[lbl]
         };
         write!(outf, "{:02x}\n", resolved).unwrap();
-        println!("{}: {:#x}", addr,  resolved);
+//        println!("{}: {:#x}", addr,  resolved);
     }
 }

@@ -12,7 +12,7 @@
 
 
 CHNGA and CHNGB possible immediates:
-DEC, INC, INV, SET0, SETFF, SETLB0, SETLB1, NEG
+DEC, INC, INV, SET00, SETFF, SETLB0, SETLB1, NEG
 0     1   2    3     4      5        6      7
 
 
