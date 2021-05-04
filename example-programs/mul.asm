@@ -1,9 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;; HEADER
-; NOTE: There cannot be more than 16 statements in the header
 JMP 
 {OUTSIDE} ; ESCAPE HEADER
 ;-----------------
 cache: 0x00
+; Multiply val1 by val2, put result in A
 val1: 10
 val2: 10
 ;;;;;;;;;;;;;;;;;;;;;;;

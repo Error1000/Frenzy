@@ -79,7 +79,7 @@ SHRA:
 SHRA_RET_ADDR:	{HLT}; Will be overriden by caller
 
 
-site1_addr: site1
+site1_addr: {site1}
 
 _start:
 

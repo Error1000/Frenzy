@@ -117,8 +117,8 @@ fn main() {
         },
         Mnemonic::CHNGA => {
             match cpu.get_immediate_from_ir(){
-                0x0 => cpu.Areg -= 1,
-                0x1 => cpu.Areg += 1,
+                0x0 => cpu.Areg = cpu.Areg.overflowing_sub(1).0,
+                0x1 => cpu.Areg = cpu.Areg.overflowing_add(1).0,
                 0x2 => cpu.Areg = !cpu.Areg,
                 0x3 => cpu.Areg = 0,
                 0x4 => cpu.Areg = 0xFF,
@@ -133,8 +133,8 @@ fn main() {
         },
         Mnemonic::CHNGB => {
             match cpu.get_immediate_from_ir(){
-                0x0 => cpu.Breg -= 1,
-                0x1 => cpu.Breg += 1,
+                0x0 => cpu.Breg = cpu.Breg.overflowing_sub(1).0,
+                0x1 => cpu.Breg = cpu.Breg.overflowing_add(1).0,
                 0x2 => cpu.Breg = !cpu.Breg,
                 0x3 => cpu.Breg = 0,
                 0x4 => cpu.Breg = 0xFF,

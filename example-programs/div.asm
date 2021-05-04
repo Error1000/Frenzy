@@ -1,11 +1,11 @@
 ;;;;;;;;;;;;;;;;;;;;;; HEADER
-; NOTE: There cannot be more than 16 statements in the header
 JMP
 {OUTSIDE} ; ESCAPE HEADER
 ;-----------------
+; Doeas cache_a/cache_b, stores result in A
 cache_a: 69
 cache_b: 0x2
-res:     0x0
+res:     0xFF ; -1 because we do one extra iteration than needed
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 OUTSIDE:
@@ -15,7 +15,7 @@ LOOP:
 	TOB ; B = res
 	{res}
 	
-	CHNGB 0x1 ; B--
+	CHNGB 0x1 ; B++
 	
 	FROMB ; res = B
 	{res}
@@ -27,6 +27,7 @@ LOOP:
 JMPC	; If carry then loop back
 {LOOP} ; Carry should be on after SUB, except when overflowing signed arithmetic, also SUB leaves B inverted, but that dosen't matter for us
 ; CHNGB is done before SUB because it updates flags too
+
 
 END:
 	TOA 
